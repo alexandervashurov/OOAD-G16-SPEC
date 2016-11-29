@@ -1,8 +1,3 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Sep 30 17:11:03 CEST 2013
-*/
-
 package icrash.operations.concepts.primarytypes.datatypes.dtGPSLocation{ 
 	
 import lu.uni.lassy.messir.libraries.primitives
@@ -16,8 +11,8 @@ import icrash.concepts.secondarytypes.classes
 
 Operation Model {
 
-		operation: icrash.concepts.primarytypes.datatypes.dtGPSLocation.is():ptBoolean
-    postF: 
+		operation: icrash.concepts.primarytypes.datatypes.dtGPSLocation.is():ptBoolean{
+    postF{ 
         let TheResult: ptBoolean in
         ( if
           ( AdtValue.latitude.is()
@@ -28,11 +23,11 @@ Operation Model {
           endif
           result = TheResult
         )
-    
-		prolog:"src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtGPSLocation-is.pl"
-		
-		operation: icrash.concepts.primarytypes.datatypes.dtGPSLocation.isNearTo(aGPSLocation:dtGPSLocation):ptBoolean
-    postF: 
+    }
+		prolog{"src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtGPSLocation-is.pl"}
+		}
+		operation: icrash.concepts.primarytypes.datatypes.dtGPSLocation.isNearTo(aGPSLocation:dtGPSLocation):ptBoolean{
+    postF{ 
         let TheResult: ptBoolean in true
         let EarthRadius: dtReal in
         let MaxDistance: dtReal in
@@ -62,11 +57,11 @@ Operation Model {
           endif
           result = TheResult
         )
-		
-		prolog:"src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtGPSLocation-isNearTo.pl"
-		
-		operation: icrash.concepts.primarytypes.datatypes.dtLatitude.is():ptBoolean
-    postF: 
+		}
+		prolog{"src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtGPSLocation-isNearTo.pl"}
+		}
+		operation: icrash.concepts.primarytypes.datatypes.dtLatitude.is():ptBoolean{
+    postF{ 
         let TheResult: ptBoolean in
         ( if
           ( AdtValue.value.geq(-90.0)
@@ -76,11 +71,11 @@ Operation Model {
           else (TheResult = false)
           endif
           result = TheResult
-        )
-		prolog: "src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtLatitude-is.pl"
-		
-		    operation: icrash.concepts.primarytypes.datatypes.dtLongitude.is():ptBoolean
-    postF: 
+        )}
+		prolog{ "src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtLatitude-is.pl"}
+		}
+		operation: icrash.concepts.primarytypes.datatypes.dtLongitude.is():ptBoolean{
+    postF{ 
         let TheResult: ptBoolean in
         ( if
           ( AdtValue.value.geq(-180.0)
@@ -90,7 +85,8 @@ Operation Model {
           else (TheResult = false)
           endif
           result = TheResult
-        )
-    prolog: "src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtLongitude-is.pl"
+        )}
+    prolog{ "src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtLongitude-is.pl"}
 	}
+}
 }

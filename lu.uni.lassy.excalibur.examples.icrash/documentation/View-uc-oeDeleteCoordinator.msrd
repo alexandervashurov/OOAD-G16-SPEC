@@ -1,0 +1,10 @@
+/*
+@author AlexVashurov
+@date Wed Nov 16 00:42:54 MSK 2016
+*/
+
+
+@@view uc-oeDeleteCoordinator
+@model Use-Case icrash.usecases.subfunctions.oeDeleteCoordinator 
+@description ""
+@caption ""

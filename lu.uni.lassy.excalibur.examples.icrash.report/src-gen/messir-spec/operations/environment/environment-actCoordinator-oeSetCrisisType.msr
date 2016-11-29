@@ -5,11 +5,13 @@ import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.string
 import lu.uni.lassy.messir.libraries.calendar
 import icrash.concepts.primarytypes.datatypes
+import icrash.environment
 
 Operation Model {
 
-operation: icrash.environment.actCoordinator.outactCoordinator.oeSetCrisisType(AdtCrisisID:dtCrisisID, AetCrisisType:etCrisisType):ptBoolean
-prolog:"src/Operations/Environment/OUT/outactCoordinator-oeSetCrisisType.pl"
+operation: actCoordinator.outactCoordinator.oeSetCrisisType(AdtCrisisID:dtCrisisID, AetCrisisType:etCrisisType):ptBoolean{
+prolog{"src/Operations/Environment/OUT/outactCoordinator-oeSetCrisisType.pl"}
+}
 
 }
 }

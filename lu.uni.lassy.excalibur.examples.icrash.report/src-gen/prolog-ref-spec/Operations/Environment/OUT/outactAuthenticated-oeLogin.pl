@@ -12,14 +12,17 @@ msrop(outactAuthenticated,
       []):-
 /* Pre Protocol:*/
   msrVar(ctState,TheSystem),
+  msrVar(actAuthenticated,TheactAuthenticated),
   msrNav([Self],[rnActor,rnSystem],[TheSystem]),
-/* PreP01 */
+  msrNav([Self],[rnActor],[TheactAuthenticated]),
+
+  /* PreP01 */
  msrNav([TheSystem],
         [vpStarted],
         [[ptBoolean,true]]),
  
- msrNav([Self],
-        [rnActor,rnctAuthenticated,vpIsLogged],
+ msrNav([TheactAuthenticated],
+        [rnctAuthenticated,vpIsLogged],
         [[ptBoolean,false]])
  .
 

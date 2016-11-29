@@ -135,6 +135,12 @@ import icrash.environment
       ieMessage(AMessage) returned to actCoordinator
     }
   }
-  }
+  use case system subfunction oeUpdatePass() {
+			actor actAdministrator[primary, active]
+		}
+	use case system subfunction oeLoginRecov() {
+			actor actAdministrator[primary, active]
+		}
+	}
 
 }

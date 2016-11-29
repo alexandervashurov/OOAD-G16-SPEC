@@ -6,14 +6,14 @@ package icrash.usecases.ugManageCrisis {
 	Use Case Model {
 		
 		use case system usergoal ugManageCrisis() {
-			primary actor actCoordinator[active]
+			actor actCoordinator[primary, active]
 
-			reuse oeValidateAlert
-			reuse oeSetCrisisStatus
-			reuse oeSetCrisisHandler
-			reuse oeReportOnCrisis
-			reuse oeCloseCrisis
-			reuse oeInvalidateAlert
+			reuse oeValidateAlert[0..*]
+			reuse oeSetCrisisStatus[0..*]
+			reuse oeSetCrisisHandler[0..*]
+			reuse oeReportOnCrisis[0..*]
+			reuse oeCloseCrisis[0..*]
+			reuse oeInvalidateAlert[0..*]
 
 			step a: actCoordinator executes oeValidateAlert
 			step b: actCoordinator executes oeSetCrisisStatus

@@ -1,8 +1,3 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Sep 30 17:11:03 CEST 2013
-*/
-
 package icrash.operations.concepts.primarytypes.classes.ctState{ 
 	
 import lu.uni.lassy.messir.libraries.primitives
@@ -20,8 +15,8 @@ Operation Model {
 		AcrisisReminderPeriod: dtSecond, 
 		AmaxCrisisReminderPeriod: dtSecond ,
     AvpLastReminder: dtDateAndTime ,
-    AvpStarted:ptBoolean	):ptBoolean
-postF: 
+    AvpStarted:ptBoolean	):ptBoolean{
+postF{
 if
 (
 /* Post F01 */
@@ -35,13 +30,13 @@ and Self.maxCrisisReminderPeriod = AmaxCrisisReminderPeriod
 and Self.vpLastReminder = AvpLastReminder
 and Self.vpStarted = AvpStarted
 
-and Self.msrIsNew
+and (Self.oclIsNew and self = Self)
 )
 then (result = true)
 else (result = false)
 endif
-
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctState-init.pl"	
-	
+}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctState-init.pl"	}
+	}
 	}
 }

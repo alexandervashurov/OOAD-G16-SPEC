@@ -1,0 +1,12 @@
+/*
+@author AlexVashurov
+@date Wed Nov 23 16:58:11 MSK 2016
+*/
+
+
+@@Primary Type Datatype icrash.concepts.primarytypes.datatypes.dtKeyWord
+@description ""
+@operation
+icrash.concepts.primarytypes.datatypes.dtKeyWord.is
+""
+@endOperations

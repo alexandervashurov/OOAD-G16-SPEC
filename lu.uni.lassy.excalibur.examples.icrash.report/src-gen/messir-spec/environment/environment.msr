@@ -1,8 +1,3 @@
-/*  
-* @author nicolas.guelfi
-* @date Mon May 06 18:10:54 CEST 2013
-*/
-
 package icrash.environment{
 	
 import icrash.concepts.primarytypes.datatypes
@@ -33,6 +28,9 @@ import lu.uni.lassy.messir.libraries.calendar
 			operation init():ptBoolean
 
 			output interface outactAdministrator{
+				operation oeRecoverPassword(
+											AdtLogin:dtLogin,
+											AdtKeyWord:dtKeyWord):ptBoolean
 				
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,
@@ -71,10 +69,10 @@ import lu.uni.lassy.messir.libraries.calendar
 											AdtCrisisID:dtCrisisID ,
 											AetCrisisStatus:etCrisisStatus 
 											):ptBoolean
-        operation oeSetCrisisType(
-                      AdtCrisisID:dtCrisisID ,
-                      AetCrisisType:etCrisisType 
-                      ):ptBoolean
+				operation oeSetCrisisType(
+                                          AdtCrisisID:dtCrisisID ,
+                                          AetCrisisType:etCrisisType
+                                          ):ptBoolean
 				operation oeValidateAlert(AdtAlertID:dtAlertID ):ptBoolean
 			}
 			
@@ -125,8 +123,8 @@ import lu.uni.lassy.messir.libraries.calendar
 			operation init():ptBoolean
 
 			output interface outactActivator{
-				operation oeSollicitateCrisisHandling():ptBoolean
-				operation oeSetClock(AcurrentClock:dtDateAndTime ):ptBoolean
+				proactive operation oeSollicitateCrisisHandling():ptBoolean
+				proactive operation oeSetClock(AcurrentClock:dtDateAndTime ):ptBoolean
 			}
 			
 			input interface inactActivator{

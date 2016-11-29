@@ -1,8 +1,3 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Sep 30 17:11:03 CEST 2013
-*/
-
 package icrash.operations.concepts.secondarytypes.datatypes.dtSMS{ 
 	
 import lu.uni.lassy.messir.libraries.primitives
@@ -16,8 +11,8 @@ import icrash.concepts.secondarytypes.classes
 
 
 Operation Model {
-operation: icrash.concepts.secondarytypes.datatypes.dtSMS.is():ptBoolean
-    postF: 
+operation: icrash.concepts.secondarytypes.datatypes.dtSMS.is():ptBoolean{
+    postF{ 
         let TheResult: ptBoolean in
         let MaxLength: ptInteger in
         ( if
@@ -28,8 +23,8 @@ operation: icrash.concepts.secondarytypes.datatypes.dtSMS.is():ptBoolean
           else (TheResult = false)
           endif
           result = TheResult
-        )
-prolog: "src/Operations/Concepts/SecondaryTypesDatatypes/SecondaryTypesDatatypes-dtSMS-is.pl"
-
-	}
+        )}
+prolog{ "src/Operations/Concepts/SecondaryTypesDatatypes/SecondaryTypesDatatypes-dtSMS-is.pl"}
+}
+}
 }

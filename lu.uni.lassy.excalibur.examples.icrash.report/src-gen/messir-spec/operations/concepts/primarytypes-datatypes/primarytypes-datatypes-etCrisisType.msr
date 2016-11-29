@@ -1,16 +1,11 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Sep 30 17:11:03 CEST 2013
-*/
-
 package icrash.operations.concepts.primarytypes.datatypes.etCrisisType{ 
 	
 import lu.uni.lassy.messir.libraries.primitives
 
 Operation Model {
 			
-		operation: icrash.concepts.primarytypes.datatypes.etCrisisType.is():ptBoolean
-    postF: 
+		operation: icrash.concepts.primarytypes.datatypes.etCrisisType.is():ptBoolean{
+    postF{ 
         let TheResult: ptBoolean in
         ( if
           ( self = small
@@ -22,8 +17,8 @@ Operation Model {
           endif
           result = TheResult
         )
-        
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesDatatypes-etCrisisType-is.pl"
-
-	}
+        }
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesDatatypes-etCrisisType-is.pl"}
+}
+}
 }

@@ -1,6 +1,6 @@
+// Do not add/remove lines because code is inserted in slides
+
 package icrash.operations.environment.actComCompany{ 
-	
-import icrash.environment
 
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.calendar
@@ -8,29 +8,29 @@ import lu.uni.lassy.messir.libraries.math
 
 import icrash.concepts.primarytypes.datatypes
 import icrash.concepts.primarytypes.classes
-import icrash.environment
-
 import icrash.concepts.secondarytypes.datatypes
+
+import icrash.environment
 
 Operation Model {
 
-operation: icrash.environment.actComCompany.outactComCompany.oeAlert(
+operation: actComCompany.outactComCompany.oeAlert(
  AetKind:etHumanKind,
  AdtMyDate:dtDate,
  AdtTime:dtTime,
  AdtPhoneNumber:dtPhoneNumber,
  AdtGPSLocation:dtGPSLocation,
  AdtComment:dtComment
-):ptBoolean
+):ptBoolean{
 
-preP:
+preP{
   let TheSystem: ctState in
   self.rnActor.rnSystem = TheSystem
   
 /* PreP01 */
   and TheSystem.vpStarted = true
-  
-preF: 
+}
+preF{ 
   let TheSystem: ctState in
   self.rnActor.rnSystem = TheSystem
 
@@ -40,8 +40,8 @@ preF:
            and TheSystem.clock.time.gt(AdtTime)
           )
       )
-      
-postF:
+}
+postF{
  let TheSystem: ctState in
   
  let  ActHuman:ctHuman in
@@ -124,12 +124,12 @@ and if (HumanCol2->msrIsEmpty)
 /* PostF06 */
 AdtSMS.value = 'Your alert has been registered. We will handle it and keep you informed'
 and TheactComCompany.rnInterfaceIN^ieSmsSend(AdtPhoneNumber,AdtSMS)
-
+}
  /* Post Protocol:*/
 /* PostP01 */
-postP: true
+postP{true}
 
-prolog:"src/Operations/Environment/OUT/outactComCompany-oeAlert.pl"
-
-	}
+prolog{"src/Operations/Environment/OUT/outactComCompany-oeAlert.pl"}
+}
+}
 }

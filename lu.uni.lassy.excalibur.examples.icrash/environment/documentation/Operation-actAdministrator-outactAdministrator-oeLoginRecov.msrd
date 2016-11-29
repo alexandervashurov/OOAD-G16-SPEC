@@ -1,0 +1,37 @@
+/*
+@author AlexVashurov
+@date Tue Nov 29 21:35:31 MSK 2016
+*/
+
+
+@@Operation
+icrash.environment.actAdministrator.outactAdministrator.oeLoginRecov
+//parameters
+@parameter
+icrash.environment.actAdministrator.outactAdministrator.oeLoginRecov.AdtPassword
+""
+@parameter
+icrash.environment.actAdministrator.outactAdministrator.oeLoginRecov.AdtKeyWord
+""
+@endParameters
+
+@description "
+ "
+//preProtocol descriptions
+@preP
+" "
+@endPreP
+//preFunctional descriptions
+@preF
+" "
+@endPreF
+//postFunctional descriptions
+@postF 
+" "
+@endPostF
+//postProtocol descriptions
+@postP 
+" "
+@endPostP
+//example
+@example" "

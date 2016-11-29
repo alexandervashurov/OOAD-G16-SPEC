@@ -1,0 +1,26 @@
+/*
+* @author AlexVashurov
+* @date Tue Nov 29 18:44:14 MSK 2016
+*/
+
+package icrash.operations.environment.actAdministrator.oeUpdatePass {
+
+import lu.uni.lassy.messir.libraries.primitives
+
+import icrash.concepts.primarytypes.datatypes
+import icrash.concepts.primarytypes.classes
+import icrash.concepts.secondarytypes.datatypes
+import icrash.concepts.secondarytypes.classes
+import icrash.environment
+
+	Operation Model {
+		operation: actAdministrator.outactAdministrator.oeUpdatePass(
+			AdtPassword:dtPassword
+		):ptBoolean
+		{
+			
+		}
+	}
+
+
+}

@@ -459,14 +459,17 @@
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptReal.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptString.msrd</semanticResources>
   <semanticResources>documentation/View-em-gv-02.msrd</semanticResources>
-  <semanticResources>concepts/primarytypes-associations/primarytypes-associations.msr</semanticResources>
-  <semanticResources>concepts/secondarytypes-associations/secondarytypes-associations.msr</semanticResources>
-  <semanticResources>concepts/primarytypes-classes/primarytypes-classes.msr</semanticResources>
-  <semanticResources>concepts/primarytypes-datatypes/primarytypes-datatypes.msr</semanticResources>
-  <semanticResources>concepts/secondarytypes-classes/secondarytypes-classes.msr</semanticResources>
-  <semanticResources>concepts/secondarytypes-datatypes/secondarytypes-datatypes.msr</semanticResources>
-  <semanticResources>tests/tests.msr</semanticResources>
-  <semanticResources>usecases/usecases.msr</semanticResources>
+  <semanticResources>documentation/View-uc-oeDeleteCoordinator.msrd</semanticResources>
+  <semanticResources>operations/environment/environment-actAdministrator-oeRecoverPassword.msr</semanticResources>
+  <semanticResources>concepts/documentation/PrimaryType-Datatype-dtKeyWord.msrd</semanticResources>
+  <semanticResources>concepts/documentation/Operation-dtKeyWord-is.msrd</semanticResources>
+  <semanticResources>environment/documentation/Operation-actAdministrator-outactAdministrator-oeRecoverPassword.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-oeRecoveryPassword.msrd</semanticResources>
+  <semanticResources>operations/messir.msr</semanticResources>
+  <semanticResources>operations/outactAdministrator.oeUpdatePass.msr</semanticResources>
+  <semanticResources>operations/outactAdministrator.oeLoginRecov.msr</semanticResources>
+  <semanticResources>operations/dtNewPassword.msr</semanticResources>
+  <semanticResources>environment/documentation/Operation-actAdministrator-outactAdministrator-oeLoginRecov.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_VxVZ4PWqEeSOM9Kfym77Zg">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

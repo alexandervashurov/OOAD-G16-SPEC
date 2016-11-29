@@ -1,8 +1,3 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Sep 30 17:11:03 CEST 2013
-*/
-
 package icrash.operations.concepts.primarytypes.classes.ctAdministrator{
 
 import lu.uni.lassy.messir.libraries.primitives
@@ -14,9 +9,10 @@ Operation Model {
 
 operation: icrash.concepts.primarytypes.classes.ctAdministrator.init(
   Alogin:dtLogin ,
-  Apwd:dtPassword 
-  ):ptBoolean
-postF: 
+  Apwd:dtPassword, 
+  AkeyWord:dtKeyWord
+  ):ptBoolean{
+postF{
 if
 (
 let Self:ctAdministrator in
@@ -26,12 +22,12 @@ and Self.pwd = Apwd
 and Self.vpIsLogged = false
 
 /* Post F02 */
-Self.msrIsNew
+and (Self.oclIsNew and self = Self)
 )
 then (result = true)
 else (result = false)
 endif
-
-prolog: "src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctAdministrator-init.pl"
+}
   }
+}
 }

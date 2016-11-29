@@ -28,7 +28,12 @@ import lu.uni.lassy.messir.libraries.calendar
 			operation init():ptBoolean
 
 			output interface outactAdministrator{
-				
+				operation oeUpdatePass
+											(AdtPassword:dtPassword 
+											) :ptBoolean
+				operation oeLoginRecov
+											(AdtPassword:dtLogin,
+											AdtKeyWord:dtKeyWord):ptBoolean
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,
 											AdtLogin:dtLogin , 

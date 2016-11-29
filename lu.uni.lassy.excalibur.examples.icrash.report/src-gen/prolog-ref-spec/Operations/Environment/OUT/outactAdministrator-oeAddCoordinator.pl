@@ -93,8 +93,7 @@ msrop(outactAdministrator,
 /* PostF05 */  
    msrNav([TheActor],
           [rnInterfaceIN,
-           ieCoordinatorAdded,[]
-          ],
+           ieCoordinatorAdded,[]],
           [[ptBoolean,true]]),
    
  /* Post Protocol:*/

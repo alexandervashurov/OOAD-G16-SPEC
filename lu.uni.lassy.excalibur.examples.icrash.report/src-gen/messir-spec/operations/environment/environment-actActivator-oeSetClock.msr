@@ -1,8 +1,3 @@
-/*
-* @author nicolas.guelfi
-* @date Tue Apr 15 14:09:32 CEST 2014
-*/
-
 package icrash.operations.environment.actActivator.oeSetClock {
 
 import icrash.environment
@@ -16,9 +11,9 @@ import icrash.concepts.primarytypes.classes
 
 	Operation Model {
 
-operation: icrash.environment.actActivator.outactActivator.oeSetClock(AcurrentClock:dtDateAndTime):ptBoolean
-
-preP:
+operation: actActivator.outactActivator.oeSetClock(AcurrentClock:dtDateAndTime):ptBoolean
+{
+preP{
   let TheSystem: ctState in
   let AvpStarted: ptBoolean in
   
@@ -27,21 +22,20 @@ preP:
   and self.rnActor.rnSystem.vpStarted = AvpStarted
   and AvpStarted = true
   and TheSystem.clock.lt(AcurrentClock)
-  
-preF: true
+}
+preF{true}
 
-postF:
+postF{
   let TheSystem: ctState in
   self.rnActor.rnSystem = TheSystem
 
 /* PostF01 */
   and TheSystem@post.clock = AcurrentClock
+}
+postP{true}
 
-postP: true
+prolog{"src/Operations/Environment/OUT/outactActivator-oeSetClock.pl"}
 
-prolog:"src/Operations/Environment/OUT/outactActivator-oeSetClock.pl"
-
-	}
-
-
+}
+}
 }

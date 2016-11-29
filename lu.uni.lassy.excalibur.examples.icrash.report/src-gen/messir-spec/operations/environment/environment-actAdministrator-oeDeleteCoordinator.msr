@@ -11,9 +11,9 @@ import icrash.concepts.primarytypes.classes
 
 Operation Model {
 
-operation: icrash.environment.actAdministrator.outactAdministrator.oeDeleteCoordinator(AdtCoordinatorID:dtCoordinatorID):ptBoolean
-
-preP:
+operation: actAdministrator.outactAdministrator.oeDeleteCoordinator(AdtCoordinatorID:dtCoordinatorID):ptBoolean
+{
+preP{
   let TheSystem: ctState in
   let TheActor:actAdministrator in
   
@@ -24,8 +24,8 @@ preP:
   and TheSystem.vpStarted = true
 /* PreP02 */
   and TheActor.rnctAuthenticated.vpIsLogged = true
-  
-preF:
+}
+preF{
   let TheSystem: ctState in
   let TheActor:actAdministrator in
    
@@ -35,16 +35,16 @@ preF:
   TheSystem.rnctCoordinator->select(id.eq(AdtCoordinatorID))
   = ColctCoordinators
   and ColctCoordinators->size().eq(1)
-
-postF:
+}
+postF{
   let TheSystem: ctState in
-  self.rnActor.rnSystem = TheSystem
+  let TheActor:actAdministrator in
+  let ThectCoordinator:ctCoordinator in
   self.rnActor.rnSystem = TheSystem
   and self.rnActor = TheActor
 /* PostF01 */
   TheSystem.rnctCoordinator->select(id.eq(AdtCoordinatorID))
-  = Collection(ThectCoordinator)
-  
+  = ThectCoordinator
   and ThectCoordinator.rnactCoordinator->forAll(msrIsKilled)
   and ThectCoordinator.msrIsKilled
  
@@ -54,10 +54,10 @@ postF:
  /* Post Protocol:*/
 /* PostP01 */
  and true
+ }
+ postP{true}
  
- postP: true
- 
- prolog:"src/Operations/Environment/OUT/outactAdministrator-oeDeleteCoordinator.pl"
- 
+ prolog{"src/Operations/Environment/OUT/outactAdministrator-oeDeleteCoordinator.pl"}
+ }
           }
         }

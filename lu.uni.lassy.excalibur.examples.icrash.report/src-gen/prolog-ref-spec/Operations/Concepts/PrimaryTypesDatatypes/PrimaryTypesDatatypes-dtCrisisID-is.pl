@@ -19,4 +19,16 @@ msrop(dtCrisisID,is,[AdtValue],Result):-
 ),
 TheResult = Result
 .
+/*
+| ?- X = [dtCrisisID,[],[[dtString,[[value,[ptString,'0123456789']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtCrisisID,[],[[dtString,[[value,[ptString,'0123456789']]],[]]]],
+Result = [ptBoolean,true] ? 
+yes
 
+| ?- X = [dtCrisisID,[],[[dtString,[[value,[ptString,'0123456789a']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtCrisisID,[],[[dtString,[[value,[ptString,'0123456789a']]],[]]]],
+Result = [ptBoolean,false] ? 
+yes
+*/

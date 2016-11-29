@@ -15,8 +15,8 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute nextValueForCrisisID:dtInteger
 				attribute clock:dtDateAndTime
 				attribute crisisReminderPeriod:dtSecond
-        attribute maxCrisisReminderPeriod:dtSecond
-        attribute vpLastReminder:dtDateAndTime
+				attribute maxCrisisReminderPeriod:dtSecond
+				attribute vpLastReminder:dtDateAndTime
 				attribute vpStarted:ptBoolean
 				
 				operation init(	AnextValueForAlertID:dtInteger,
@@ -35,8 +35,7 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute instant:dtDateAndTime
 				attribute comment:dtComment
 				
-				operation init(
-										Aid:dtAlertID ,
+				operation init(     	Aid:dtAlertID ,
 										Astatus:etAlertStatus ,
 										Alocation:dtGPSLocation ,
 										Ainstant:dtDateAndTime ,
@@ -109,12 +108,17 @@ import lu.uni.lassy.messir.libraries.calendar
 			class ctAdministrator 
 					role rnctAdministrator
 					cardinality [1..1]
+					
 					extends ctAuthenticated{
-
+					attribute keyWord:dtKeyWord
+		
 				operation init(
 										Alogin:dtLogin ,
-										Apwd:dtPassword ):ptBoolean
+										Apwd:dtPassword,
+										AkeyWord:dtKeyWord):ptBoolean
 			}
+			
+			
 		}
 	}
 }

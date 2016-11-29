@@ -9,7 +9,8 @@ Operation Model {
 
 operation: icrash.concepts.primarytypes.classes.ctAdministrator.init(
   Alogin:dtLogin ,
-  Apwd:dtPassword 
+  Apwd:dtPassword, 
+  AkeyWord:dtKeyWord
   ):ptBoolean{
 postF{
 if
@@ -27,7 +28,6 @@ then (result = true)
 else (result = false)
 endif
 }
-prolog{ "src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctAdministrator-init.pl"}
   }
 }
 }

@@ -11,7 +11,7 @@ msrop(dtLogin,is,[AdtValue],Result):-
 (
    (
         (
-         MaxLength = [ptInteger,8],
+         MaxLength = [ptInteger,20],
          msrNav([AdtValue],
                 [value,length,[],leq,[MaxLength]],
                 [[ptBoolean,true]])
@@ -22,3 +22,16 @@ msrop(dtLogin,is,[AdtValue],Result):-
 ),
   Result = TheResult
 .
+/*
+| ?- X = [dtLogin,[],[[dtString,[[value,[ptString,'01234567']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtLogin,[],[[dtString,[[value,[ptString,'01234567']]],[]]]],
+Result = [ptBoolean,true] ? 
+yes
+
+| ?- X = [dtLogin,[],[[dtString,[[value,[ptString,'01234567a']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtLogin,[],[[dtString,[[value,[ptString,'01234567a']]],[]]]],
+Result = [ptBoolean,false] ? 
+yes
+*/

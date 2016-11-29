@@ -1,17 +1,12 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Sep 30 17:11:03 CEST 2013
-*/
-
 package icrash.operations.concepts.primarytypes.datatypes.dtPhoneNumber{ 
 	
 import lu.uni.lassy.messir.libraries.primitives
 
 Operation Model {
 
-		operation: icrash.concepts.primarytypes.datatypes.dtPhoneNumber.is():ptBoolean
+		operation: icrash.concepts.primarytypes.datatypes.dtPhoneNumber.is():ptBoolean{
 		
-    postF: 
+    postF{ 
     let TheResult: ptBoolean in
     ( if
       ( AdtValue.value.length().gt(4)
@@ -22,7 +17,8 @@ Operation Model {
       endif
       result = TheResult
     )
-
-		prolog:"src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtPhoneNumber-is.pl"
+}
+		prolog{"src/Operations/Concepts/PrimaryTypesDatatypes/PrimaryTypesDatatypes-dtPhoneNumber-is.pl"}
 	}
+}
 }

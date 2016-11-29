@@ -1,15 +1,9 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Aug 11 13:51:39 CEST 2014
-*/
-
 package lu.uni.lassy.excalibur.examples.icrash.tests.testcase01 {
 
 import lu.uni.lassy.messir.libraries.string
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.calendar
-import lu.uni.lassy.messir.libraries.collections
 
 import icrash.concepts.primarytypes.associations
 import icrash.concepts.primarytypes.classes
@@ -37,6 +31,7 @@ import icrash.environment
             true
           }
         }
+        prolog{"src/Tests/system/01/system-sim-01-01-oeCreateSystemAndEnvironment.pl"}
       }
 //---------------------------------------------------------------------
  test step ts02oeSetClock order 02{
@@ -90,7 +85,7 @@ test step ts03oeLogin order 03{
       }
       }
 //---------------------------------------------------------------------
- test step ts04_eAddCoordinator order 04{
+ test step ts04oeAddCoordinator order 04{
         variables{
             TheActor : actAdministrator
             AdtCoordinatorID : dtCoordinatorID
@@ -138,7 +133,7 @@ test step ts03oeLogin order 03{
       }
     }
 //---------------------------------------------------------------------
- test step ts06oeSetClock_2 order 06{
+ test step ts06oeSetClock02 order 06{
         variables{
             TheActor:actActivator
             ACurrentClock:dtDateAndTime
@@ -206,7 +201,7 @@ test step ts03oeLogin order 03{
       }
      }
 //---------------------------------------------------------------------
- test step ts08oeSetClock_3 order 08{
+ test step ts08oeSetClock03 order 08{
         variables{
             TheActor:actActivator
             ACurrentClock:dtDateAndTime
@@ -230,7 +225,7 @@ test step ts03oeLogin order 03{
       }
      }
 //---------------------------------------------------------------------
- test step ts09_eSollicitateCrisisHandling order 09{
+ test step ts09oeSollicitateCrisisHandling order 09{
         variables{
             TheActor : actActivator
           }
@@ -274,7 +269,7 @@ test step ts03oeLogin order 03{
       }
      }
 //---------------------------------------------------------------------
- test step ts10oeLogin_2 order 10{
+ test step ts10oeLogin02 order 10{
         variables{
             TheActor : actCoordinator
             AdtLogin:dtLogin
@@ -328,15 +323,12 @@ test step ts03oeLogin order 03{
         variables{
             TheActor : actCoordinator
             AdtCrisisID : dtCrisisID
-
-            TheComCompany: actComCompany
-            TheCoordinator:actCoordinator
           }
         constraints{
             TheActor=TheSystem.rnactCoordinator
             ->select(a | a.rnctCoordinator.login.value.eq('steve'))
-            ->any2(true)
-            AdtCrisisID.value= '1' 
+            ->any2(true) 
+            //and AdtCrisisID.value= '1' 
           }
         test message{
           out:TheActor sends to system actCoordinator.outactCoordinator.oeSetCrisisHandler(AdtCrisisID)
@@ -347,8 +339,10 @@ test step ts03oeLogin order 03{
             AdtPhoneNumber:dtPhoneNumber
             AdtSMS:dtSMS
             ActAlert:ctAlert
+            
+            TheComCompany: actComCompany
+            TheCoordinator:actCoordinator
           }
-//TODO  - make consistent with test step implementation by adding Prolog code for input messages
           constraints{
            AMessage = 'You are now considered as handling the crisis !'
            AdtSMS.value = 'The handling of your alert by our services is in progress !'
@@ -359,7 +353,7 @@ test step ts03oeLogin order 03{
       }
      }
 //---------------------------------------------------------------------
- test step ts13oeSetClock_4 order 13{
+ test step ts13oeSetClock04 order 13{
         variables{
             TheActor:actActivator
             ACurrentClock:dtDateAndTime
@@ -392,7 +386,7 @@ test step ts03oeLogin order 03{
             TheActor=TheSystem.rnactCoordinator
             ->select(a | a.rnctCoordinator.login.value.eq('steve'))
             ->any2(true)
-            AdtAlertID.value= '1'
+            //and AdtAlertID.value= '1'
           }
         test message{
           out:TheActor sends to system actCoordinator.outactCoordinator.oeValidateAlert(AdtAlertID)
@@ -428,8 +422,8 @@ test step ts03oeLogin order 03{
             AdtTime.minute.value = 20
             AdtTime.second.value = 00
             AdtPhoneNumber.value = '+3524666445000' 
-            AdtGPSLocation.latitude.value = 49.627675
-            AdtGPSLocation.longitude.value = 6.159590
+            AdtGPSLocation.latitude.value = 49.627095
+            AdtGPSLocation.longitude.value = 6.160251
             AdtComment.value = 'A car crash just happened.'
           }
         test message{
@@ -452,7 +446,7 @@ test step ts03oeLogin order 03{
        }
       }
 //---------------------------------------------------------------------
- test step ts16oeSetClock_5 order 16{
+ test step ts16oeSetClock05 order 16{
         variables{
             TheActor:actActivator
             ACurrentClock:dtDateAndTime
@@ -486,8 +480,8 @@ test step ts03oeLogin order 03{
             TheActor=TheSystem.rnactCoordinator
             ->select(a | a.rnctCoordinator.login.value.eq('steve'))
             ->any2(true)
-            AdtCrisisID.value= '1'
-            AetCrisisStatus = solved
+            //and AdtCrisisID.value= '1'
+            //and AetCrisisStatus = solved
           }
         test message{
           out:TheActor sends to system actCoordinator.outactCoordinator.oeSetCrisisStatus(AdtCrisisID, AetCrisisStatus)
@@ -513,8 +507,8 @@ test step ts03oeLogin order 03{
             TheActor=TheSystem.rnactCoordinator
             ->select(a | a.rnctCoordinator.login.value.eq('steve'))
             ->any2(true) 
-            AdtCrisisID.value= '1'
-            AdtComment.value = '3 victims sent to hospital, 2 cars evacuated and 4 rescue unit mobilized'
+            //and AdtCrisisID.value= '1'
+            //and AdtComment.value = '3 victims sent to hospital, 2 cars evacuated and 4 rescue unit mobilized'
           }
         test message{
           out:TheActor sends to system actCoordinator.outactCoordinator.oeReportOnCrisis(AdtCrisisID,AdtComment)
@@ -539,7 +533,7 @@ test step ts03oeLogin order 03{
             TheActor=TheSystem.rnactCoordinator
             ->select(a | a.rnctCoordinator.login.value.eq('steve'))
             ->any2(true)
-            AdtCrisisID.value= '1'
+            //and AdtCrisisID.value= '1'
           }
         test message{
           out:TheActor sends to system actCoordinator.outactCoordinator.oeCloseCrisis(AdtCrisisID)

@@ -22,3 +22,17 @@ msrop(dtPassword,is,[AdtValue],Result):-
 ),
   Result = TheResult
 .
+/*
+| ?- X = [dtPassword,[],[[dtString,[[value,[ptString,'012345']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtPassword,[],[[dtString,[[value,[ptString,'012345']]],[]]]],
+Result = [ptBoolean,true] ? 
+yes
+
+
+| ?- X = [dtPassword,[],[[dtString,[[value,[ptString,'01234']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtPassword,[],[[dtString,[[value,[ptString,'01234']]],[]]]],
+Result = [ptBoolean,false] ? 
+yes
+*/

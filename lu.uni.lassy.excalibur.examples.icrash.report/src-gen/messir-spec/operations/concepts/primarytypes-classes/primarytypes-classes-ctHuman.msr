@@ -8,7 +8,8 @@ import icrash.concepts.primarytypes.classes
 Operation Model {
 
 operation: icrash.concepts.primarytypes.classes.ctHuman.init(Aid:dtPhoneNumber, Akind:etHumanKind):ptBoolean
-postF: 
+{
+postF{ 
 if
 (
 /* Post F01 */
@@ -18,17 +19,16 @@ Self.id = Aid
 and Self.kind = Akind
 
 /* Post F02 */
-and Self.msrIsNew
+and (Self.oclIsNew and self = Self)
 )
 then (result = true)
 else (result = false)
 endif
-
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctHuman-init.pl"
-
-operation: icrash.concepts.primarytypes.classes.ctHuman.isAcknowledged():ptBoolean
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctHuman-isAcknowledged.pl"
-
 }
-
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctHuman-init.pl"}
+}
+operation: icrash.concepts.primarytypes.classes.ctHuman.isAcknowledged():ptBoolean{
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctHuman-isAcknowledged.pl"}
+}
+}
 }

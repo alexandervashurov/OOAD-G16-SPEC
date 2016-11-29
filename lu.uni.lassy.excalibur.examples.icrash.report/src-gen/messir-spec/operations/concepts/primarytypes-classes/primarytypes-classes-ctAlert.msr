@@ -1,8 +1,3 @@
-/*
-* @author nicolas.guelfi
-* @date Mon Sep 30 17:11:03 CEST 2013
-*/
-
 package icrash.operations.concepts.primarytypes.classes.ctAlert{ 
 	
 import lu.uni.lassy.messir.libraries.primitives
@@ -16,8 +11,8 @@ import icrash.environment
 Operation Model {
 	
 operation: icrash.concepts.primarytypes.classes.ctAlert.init(Aid:dtAlertID , Astatus:etAlertStatus , Alocation:dtGPSLocation , Ainstant:dtDateAndTime , Acomment:dtComment 
-):ptBoolean
-postF: 
+):ptBoolean{
+postF{
 if
 (
 /* Post F01 */
@@ -28,17 +23,18 @@ and Self.location = Alocation
 and Self.instant = Ainstant
 and Self.comment = Acomment
 /* Post F02 */
-and Self.oclIsNew
+and (Self.oclIsNew and self = Self)
 )
 then (result = true)
 else (result = false)
 endif
-
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctAlert-init.pl"
-
+}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctAlert-init.pl"}
+}
 
 operation: icrash.concepts.primarytypes.classes.ctAlert.isSentToCoordinator(AactCoordinator:actCoordinator ):ptBoolean
-postF: 
+{
+postF{ 
 if
 (
 /* Post F01 */
@@ -47,8 +43,9 @@ AactCoordinator.rnInterfaceIN.ieSendAnAlert(self)
 then (result = true)
 else (result = false)
 endif
+}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctAlert-isSentToCoordinator.pl"}
 
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctAlert-isSentToCoordinator.pl"
-
-	}
+}
+}
 }

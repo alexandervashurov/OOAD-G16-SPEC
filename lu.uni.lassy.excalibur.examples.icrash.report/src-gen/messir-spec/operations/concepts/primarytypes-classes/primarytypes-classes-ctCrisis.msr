@@ -21,8 +21,8 @@ operation: icrash.concepts.primarytypes.classes.ctCrisis.init(
                 Alocation:dtGPSLocation,
                 Ainstant:dtDateAndTime,
                 Acomment:dtComment
-              ):ptBoolean
-postF: 
+              ):ptBoolean{
+postF{
 if
 (
 /* Post F01 */
@@ -34,15 +34,16 @@ and Self.location = Alocation
 and Self.instant = Ainstant
 and Self.comment = Acomment
 /* Post F02 */
-and Self.msrIsNew
+and (Self.oclIsNew and self = Self)
 )
 then (result = true)
 else (result = false)
-endif
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-init.pl"
+endif}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-init.pl"}}
 //------------------------------------------------------------
 operation: icrash.concepts.primarytypes.classes.ctCrisis.handlingDelayPassed():ptBoolean
-postF: 
+{
+postF{ 
 let TheSystem:ctState in
 let CurrentClockSecondsQty:dtInteger in
 let vpLastReminderSecondsQty:dtInteger in
@@ -59,11 +60,12 @@ if
 then (result = true)
 else (result = false)
 endif
-
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-handlingDelayPassed.pl"
+}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-handlingDelayPassed.pl"}}
 //------------------------------------------------------------
 operation: icrash.concepts.primarytypes.classes.ctCrisis.maxHandlingDelayPassed():ptBoolean
-postF: 
+{
+postF{ 
 let TheSystem:ctState in
 let CurrentClockSecondsQty:dtInteger in
 let CrisisInstantSecondsQty:dtInteger in
@@ -81,11 +83,12 @@ if
 then (result = true)
 else (result = false)
 endif
-
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-maxHandlingDelayPassed.pl"
+}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-maxHandlingDelayPassed.pl"}}
 //------------------------------------------------------------
 operation: icrash.concepts.primarytypes.classes.ctCrisis.isSentToCoordinator(AactCoordinator:actCoordinator):ptBoolean
-postF: 
+{
+postF{ 
 if 
 (
 /* Post F01 */
@@ -93,11 +96,12 @@ if
 )
 then (result = true)
 else (result = false)
-endif
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-isSentToCoordinator.pl" 
+endif}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-isSentToCoordinator.pl" }}
 //------------------------------------------------------------
 operation: icrash.concepts.primarytypes.classes.ctCrisis.isAllocatedIfPossible():ptBoolean
-postF: 
+{
+postF{ 
 if (   
 /* Post F01 */
 self.maxHandlingDelayPassed()
@@ -123,7 +127,8 @@ and
 then (result = true)
 else (result = false)
 endif
-
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-isAllocatedIfPossible.pl"
+}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCrisis-isAllocatedIfPossible.pl"}
+}
 }
 }

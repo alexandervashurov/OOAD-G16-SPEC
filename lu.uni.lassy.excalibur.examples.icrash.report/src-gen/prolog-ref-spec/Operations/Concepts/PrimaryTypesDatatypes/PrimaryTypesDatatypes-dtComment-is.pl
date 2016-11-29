@@ -22,3 +22,17 @@ msrop(dtComment,is,[AdtValue],Result):-
 ),
   Result = TheResult
 .
+
+/*
+| ?- X = [dtComment,[],[[dtString,[[value,[ptString,'I broke my leg ! Please help ...']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtComment,[],[[dtString,[[value,[ptString,'I broke my leg ! Please help ...']]],[]]]],
+Result = [ptBoolean,true] ? 
+yes
+
+| ?- X = [dtComment,[],[[dtString,[[value,[ptString,'I broke my leg when I was running with my dog to go to the skate park because my friends called me on my mobile phone and told me that a skate star was doing triple back flips.']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+X = [dtComment,[],[[dtString,[[value,[ptString,'I broke my leg when I was running with my dog to go to the skate park because my friends called me on my mobile phone and told me that a skate star was doing triple back flips.']]],[]]]],
+Result = [ptBoolean,false] ? 
+yes
+*/

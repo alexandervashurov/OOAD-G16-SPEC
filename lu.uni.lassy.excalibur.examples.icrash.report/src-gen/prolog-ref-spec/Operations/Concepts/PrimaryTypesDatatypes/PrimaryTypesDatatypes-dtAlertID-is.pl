@@ -20,3 +20,20 @@ msrVar(ptBoolean,TheResult),
 TheResult = Result
 .
 
+/*
+| ?- X = [dtAlertID,[],[[dtString,[[value,[ptString,'0123456789']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+
+X = [dtAlertID,[],[[dtString,[[value,[ptString,'0123456789']]],[]]]],
+Result = [ptBoolean,true] ? 
+
+yes
+
+| ?- X = [dtAlertID,[],[[dtString,[[value,[ptString,'012345678901234567890123456789']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+
+X = [dtAlertID,[],[[dtString,[[value,[ptString,'012345678901234567890123456789']]],[]]]],
+Result = [ptBoolean,false] ? 
+
+yes
+*/

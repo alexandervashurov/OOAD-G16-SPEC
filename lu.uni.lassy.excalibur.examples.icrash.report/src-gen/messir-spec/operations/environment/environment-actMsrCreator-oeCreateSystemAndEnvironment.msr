@@ -1,7 +1,5 @@
 package icrash.operations.environment.actMsrCreator.oeCreateSystemAndEnvironment{ 
 	
-import icrash.environment
-
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.calendar
@@ -10,13 +8,14 @@ import icrash.concepts.primarytypes.datatypes
 import icrash.concepts.primarytypes.classes
 import icrash.concepts.secondarytypes.datatypes
 import icrash.concepts.secondarytypes.classes
+import icrash.environment
 
 Operation Model {
 
-operation: icrash.environment.actMsrCreator.outactMsrCreator.oeCreateSystemAndEnvironment(AqtyComCompanies:ptInteger):ptBoolean
-preP: true
-preF: true
-postF: 
+operation: actMsrCreator.outactMsrCreator.oeCreateSystemAndEnvironment(AqtyComCompanies:ptInteger):ptBoolean
+{preP{true}
+preF{true}
+postF{
   let TheSystem: ctState in
   let AactMsrCreator: actMsrCreator in
   let AactAdministrator: actAdministrator in
@@ -30,7 +29,13 @@ postF:
   /* PostF01 -- MUST ALWAYS BE MADE FIRST -- */ 
   AnextValueForAlertID.value.eq(1)
   and AnextValueForCrisisID.value.eq(1)
-  and Aclock.isNow()
+  and Aclock.date.year.value = 1970 
+  and Aclock.date.month.value = 01
+  and Aclock.date.day.value = 01
+  and Aclock.time.hour.value = 00
+  and Aclock.time.minute.value = 00
+  and Aclock.time.second.value = 00
+
   and AcrisisReminderPeriod.value.eq(300)
   and AmaxCrisisReminderPeriod.value.eq(1200)
   and AvpStarted = true
@@ -45,7 +50,8 @@ postF:
   /* PostF02*/ 
   and AactMsrCreator.init()
   /* PostF03 */ 
-  and let AactComCompanyCol: collection(actComCompany)[AqtyComCompanies] in
+  and let AactComCompanyCol: Bag(actComCompany) in
+  AactComCompanyCol->size() = AqtyComCompanies
   AactComCompanyCol-> forAll(init())
  /* PostF04*/ 
   and AactAdministrator.init()
@@ -60,10 +66,12 @@ postF:
       and AdtPassword.value.eq('7WXC1359')
       and ActAdministrator.init(AdtLogin,AdtPassword)
  /* PostF07*/ 
-  and ActAdministrator@post.rnactAuthenticated = AactAdministrator
-postP: true
+  and ActAdministrator@post.rnactAuthenticated = AactAdministrator}
+postP{true}
 
-prolog: "src/Operations/Environment/OUT/outactMsrCreator-oeCreateSystemAndEnvironment.pl"
+prolog{ "src/Operations/Environment/OUT/outactMsrCreator-oeCreateSystemAndEnvironment.pl"}
 
 }
+}
+
 }

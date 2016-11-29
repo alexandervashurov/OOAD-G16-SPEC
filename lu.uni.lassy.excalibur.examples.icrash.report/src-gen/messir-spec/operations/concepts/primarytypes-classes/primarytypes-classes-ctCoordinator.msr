@@ -7,7 +7,8 @@ import icrash.concepts.primarytypes.classes
 Operation Model {
 
 operation: icrash.concepts.primarytypes.classes.ctCoordinator.init(Aid:dtCoordinatorID, Alogin:dtLogin, Apwd:dtPassword):ptBoolean
-postF: 
+{
+postF{ 
 if
 (
 /* Post F01 */
@@ -17,11 +18,12 @@ and Self.login = Alogin
 and Self.pwd = Apwd
 and Self.vpIsLogged = false
 /* Post F02 */
-and Self.msrIsNew
+and (Self.oclIsNew and self = Self)
 )
 then (result = true)
 else (result = false)
-endif
-prolog:"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCoordinator-init.pl"
+endif}
+prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctCoordinator-init.pl"}
+}
 }
 }

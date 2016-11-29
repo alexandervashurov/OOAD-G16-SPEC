@@ -7,16 +7,17 @@ import lu.uni.lassy.messir.libraries.calendar
 
 import icrash.concepts.primarytypes.datatypes
 import icrash.concepts.primarytypes.classes
+import icrash.environment
 
 Operation Model {
 
-operation: icrash.environment.actActivator.outactActivator.oeSollicitateCrisisHandling():ptBoolean
-
-preP:
+operation: actActivator.outactActivator.oeSollicitateCrisisHandling():ptBoolean
+{
+preP{
   let TheSystem: ctState in
   let AvpStarted: ptBoolean in
   let ColctCrisisToHandle:
-        collection(ctCrisis) in
+        Bag(ctCrisis) in
   
   self.rnActor.rnSystem = TheSystem
     
@@ -27,13 +28,13 @@ preP:
   and TheSystem.rnctCrisis->select(handlingDelayPassed()) 
       = ColctCrisisToHandle
   and ColctCrisisToHandle->size().geq(1)
+}
+preF{true}
 
-preF: true
-
-postF:
+postF{
   let TheSystem: ctState in
   let AMessageForCrisisHandlers: dtComment in
-  let ColctCrisisToAllocateIfPossible:collection(ctCrisis) in
+  let ColctCrisisToAllocateIfPossible:Bag(ctCrisis) in
   
   self.rnActor.rnSystem = TheSystem
 /* PostF01 */
@@ -58,17 +59,17 @@ postF:
             )
       else true
       endif
-
-postP: 
+}
+postP{
   let TheSystem: ctState in
   let TheClock: dtDateAndTime in
   
   self.rnActor.rnSystem = TheSystem
   and TheSystem.clock = TheClock
   and TheSystem@post.vpLastReminder = TheClock
+}
 
-
-prolog:"src/Operations/Environment/OUT/outactActivator-oeSollicitateCrisisHandling.pl"
-
+prolog{"src/Operations/Environment/OUT/outactActivator-oeSollicitateCrisisHandling.pl"}
+}
 }
 }

@@ -9,7 +9,7 @@ package icrash.usecases.suGlobalCrisisHandling {
 	Use Case Model {
 		use case system summary 
 		  suGlobalCrisisHandling() {
-			primary actor actCoordinator[active]
+			actor actCoordinator[primary,active]
 			
 			reuse ugSecurelyUseSystem[1..*]
 			reuse ugMonitor[1..*] 
@@ -21,11 +21,11 @@ package icrash.usecases.suGlobalCrisisHandling {
 			        executes ugMonitor
 			step c: actCoordinator
 			        executes ugManageCrisis
-			
+
       ordering constraint 
         "steps (a) (b) and (c) executions are interleaved 
-        (steps (b) and (c) have there protocol constrained by steps of (a))."
+        (steps (b) and (c) have their protocol constrained by steps of (a))."
       ordering constraint 
-          "steps (a) (b) and (c) can be executed multiple times."		
+          "steps (a) (b) and (c) can be executed multiple times."
 }
 }}

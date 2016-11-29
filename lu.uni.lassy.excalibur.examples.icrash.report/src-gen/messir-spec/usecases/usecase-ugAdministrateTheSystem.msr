@@ -8,11 +8,11 @@ package icrash.usecases.ugAdministrateTheSystem {
 		
 		use case system usergoal 
 		  ugAdministrateTheSystem() {
-			primary actor actAdministrator[active]
+			actor actAdministrator[primary,active]
 
 			reuse ugSecurelyUseSystem[1..*]
 			reuse oeAddCoordinator[1..*]
-			reuse oeDeleteCoordinator[1..*]
+			reuse oeDeleteCoordinator[0..*]
 			
 			step a: actAdministrator 
 			     executes ugSecurelyUseSystem
@@ -23,7 +23,7 @@ package icrash.usecases.ugAdministrateTheSystem {
 			
 			ordering constraint 
 			   "steps (a) (b) and (c) executions are interleaved 
-          (steps (b) and (c) have there protocol constrained 
+          (steps (b) and (c) have their protocol constrained 
            by steps of (a))."
       ordering constraint 
           "steps (a) (b) and (c) can be executed multiple times."

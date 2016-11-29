@@ -1,0 +1,26 @@
+/*
+* @author AlexVashurov
+* @date Tue Nov 29 18:57:48 MSK 2016
+*/
+
+package icrash.operations.environment.actAdministrator.oeLoginRecov {
+
+import lu.uni.lassy.messir.libraries.primitives
+
+import icrash.concepts.primarytypes.datatypes
+import icrash.concepts.primarytypes.classes
+import icrash.concepts.secondarytypes.datatypes
+import icrash.concepts.secondarytypes.classes
+import icrash.environment
+
+	Operation Model {
+		operation: actAdministrator.outactAdministrator.oeLoginRecov(
+			AdtLogin:dtLogin,
+			AdtKeyWord:dtKeyWord):ptBoolean
+		{
+			
+		}
+	}
+
+
+}

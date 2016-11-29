@@ -22,3 +22,13 @@ msrVar(ptBoolean,TheResult),
 ),
   Result = TheResult
 .
+/*
+| ?- X = [dtPhoneNumber,[],[[dtString,[[value,[ptString,'(+352) 46 66 44 60 00']]],[]]]],
+msrNav([X],[is,[]],[Result]).
+
+X = [dtPhoneNumber,[],[[dtString,[[value,[ptString,'(+352) 46 66 44 60 00']]],[]]]],
+
+Result = [ptBoolean,true] ? 
+
+yes
+*/
