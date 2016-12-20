@@ -1,0 +1,10 @@
+/*
+@author AlexVashurov
+@date Mon Dec 19 18:03:57 MSK 2016
+*/
+
+
+@@view uci-uciugPassRecovery
+@instance Use-Case usecases.uciugPassRecovery.uciugPassRecovery 
+@description ""
+@caption ""

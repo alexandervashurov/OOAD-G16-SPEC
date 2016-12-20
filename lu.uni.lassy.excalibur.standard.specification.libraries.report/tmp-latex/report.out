@@ -1,0 +1,14 @@
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{2 General Description}{}% 2
+\BOOKMARK [0][-]{chapter.3}{3 Additional Constraints}{}% 3
+\BOOKMARK [0][-]{appendix.A}{A Undocumented Messir Specification Elements}{}% 4
+\BOOKMARK [1][-]{section.A.1}{A.1 Undocumented Primary Types}{appendix.A}% 5
+\BOOKMARK [2][-]{subsection.A.1.1}{A.1.1 Undocumented Primary Datatype Types}{section.A.1}% 6
+\BOOKMARK [2][-]{subsection.A.1.2}{A.1.2 Undocumented Primary Primitive Types}{section.A.1}% 7
+\BOOKMARK [1][-]{section.A.2}{A.2 Undocumented Operation Specifications}{appendix.A}% 8
+\BOOKMARK [0][-]{appendix.B}{B Messir Specification Files Listing}{}% 9
+\BOOKMARK [1][-]{section.B.1}{B.1 File /src-gen/messir-spec/.views.msr}{appendix.B}% 10
+\BOOKMARK [1][-]{section.B.2}{B.2 File /src-gen/messir-spec/library/calendar.msr}{appendix.B}% 11
+\BOOKMARK [1][-]{section.B.3}{B.3 File /src-gen/messir-spec/library/math.msr}{appendix.B}% 12
+\BOOKMARK [1][-]{section.B.4}{B.4 File /src-gen/messir-spec/library/primitives.msr}{appendix.B}% 13
+\BOOKMARK [1][-]{section.B.5}{B.5 File /src-gen/messir-spec/library/string.msr}{appendix.B}% 14

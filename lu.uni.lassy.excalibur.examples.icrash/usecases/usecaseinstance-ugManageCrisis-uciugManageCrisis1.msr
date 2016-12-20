@@ -1,0 +1,15 @@
+package usecases.uciugManageCrisis {
+	import icrash.usecases.ugManageCrisis
+
+	Use Case Model {
+
+		use case instance uciugManageCrisis1 : ugManageCrisis{
+			actors {
+				
+			}
+			use case steps {
+				
+			}
+		}
+	}
+}

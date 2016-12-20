@@ -54,16 +54,10 @@
         <path d="M260 119 L369 119 L369 172 L260 172 L260 119 Z" />
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
-        <path d="M315 167 L333 167 L333 185 L315 185 L315 167 Z" />
-      </clipPath>
-      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath17">
         <path d="M267 237 L377 237 L377 273 L267 273 L267 237 Z" />
       </clipPath>
-      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath18">
+      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath17">
         <path d="M267 237 L376 237 L376 273 L267 273 L267 237 Z" />
-      </clipPath>
-      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath19">
-        <path d="M235 274 L253 274 L253 292 L235 292 L235 274 Z" />
       </clipPath>
     </defs>
     <g fill="rgb(131,122,133)" font-family="'Lucida Sans'" stroke-linejoin="round" stroke="rgb(131,122,133)" stroke-width="0" stroke-miterlimit="0">
@@ -94,18 +88,10 @@
       <text x="261" y="134" clip-path="url(#clipPath14)" fill="black" font-family="'Dialog'" stroke="none" xml:space="preserve">&lt;&lt;secondary&gt;&gt;</text>
       <text x="270" y="151" clip-path="url(#clipPath15)" fill="black" font-family="'Dialog'" stroke="none" xml:space="preserve">&lt;&lt;passive&gt;&gt;</text>
       <text x="269" y="168" clip-path="url(#clipPath15)" fill="black" font-family="'Dialog'" stroke="none" xml:space="preserve">&lt;&lt;multiple&gt;&gt;</text>
-    </g>
-    <g font-size="11" stroke-width="2.1" stroke-linecap="butt">
-      <image x="316" y="168" clip-path="url(#clipPath16)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABuklEQVR42s1SSyiE&#xA;URT+fjORGI+ZpH/yKMLkn0Iimiwoa2WFhVjYSrKwkH6ysFAWNJuRLK2UshTlMTOR&#xA;RxmSPDKDP3nFDGOMcd17x2PmN9acut3O+b7v3HPOPcBfmybS8ayskOagIne1NMnW&#xA;+aUBNXl3uI+0iUlyv3VKHp2c5HhcpFgZH4T4GI/H7TVOVot9NM5wZWyQ81lc+0kI&#xA;uA9BnkPQl5ZALxC4nHZsdraSlKo6PDgX4HM6IJVaIFDsYsvO+cwE9SvexWVI5koK&#xA;EFzfKri88CDTmA1Dugiqxe7eOpJrayD1Dgk/EjBzdfQQ774d5qIygBdJKImlo1Ud&#xA;bEFnssBsG/nSCbEm6yivIDmaROhy88IBmsjnPsZpyI/qjfUojTbm3zwFgQQtiPf5&#xA;6wXyQmOB4A9qXKwWiP8Vyaki4H8B+TjMf/MHOf7rHjDwYW4OUr6J+8rVEU7PFISI&#xA;F7okPTLSDPA4VtHd3C5bN+3Re3AyMU3uZ2YhFRaHB+bawaulHsahAX4znw2T4YzH&#xA;+FEz0Jqy+H1348a5co/UxobwtG3f1bmo0CimRPGhXuVVQwFR9xnZIsM/t/B/2Dv5&#xA;D9UQWzGrwAAAAABJRU5ErkJggg==" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed" />
-    </g>
-    <g stroke-linecap="butt" font-size="14" fill="rgb(209,209,209)" font-family="'Lucida Sans'" stroke="rgb(209,209,209)" stroke-width="2.1">
       <line clip-path="url(#clipPath12)" fill="none" x1="126" x2="126" y1="227" y2="283" />
       <line clip-path="url(#clipPath12)" fill="none" x1="126" x2="418" y1="283" y2="283" />
-      <text x="268" y="252" clip-path="url(#clipPath17)" fill="black" font-family="'Dialog'" stroke="none" xml:space="preserve">&lt;&lt;secondary&gt;&gt;</text>
-      <text x="277" y="269" clip-path="url(#clipPath18)" fill="black" font-family="'Dialog'" stroke="none" xml:space="preserve">&lt;&lt;passive&gt;&gt;</text>
-    </g>
-    <g font-size="11" stroke-width="2.1" stroke-linecap="butt">
-      <image x="236" y="275" clip-path="url(#clipPath19)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABuklEQVR42s1SSyiE&#xA;URT+fjORGI+ZpH/yKMLkn0Iimiwoa2WFhVjYSrKwkH6ysFAWNJuRLK2UshTlMTOR&#xA;RxmSPDKDP3nFDGOMcd17x2PmN9acut3O+b7v3HPOPcBfmybS8ayskOagIne1NMnW&#xA;+aUBNXl3uI+0iUlyv3VKHp2c5HhcpFgZH4T4GI/H7TVOVot9NM5wZWyQ81lc+0kI&#xA;uA9BnkPQl5ZALxC4nHZsdraSlKo6PDgX4HM6IJVaIFDsYsvO+cwE9SvexWVI5koK&#xA;EFzfKri88CDTmA1Dugiqxe7eOpJrayD1Dgk/EjBzdfQQ774d5qIygBdJKImlo1Ud&#xA;bEFnssBsG/nSCbEm6yivIDmaROhy88IBmsjnPsZpyI/qjfUojTbm3zwFgQQtiPf5&#xA;6wXyQmOB4A9qXKwWiP8Vyaki4H8B+TjMf/MHOf7rHjDwYW4OUr6J+8rVEU7PFISI&#xA;F7okPTLSDPA4VtHd3C5bN+3Re3AyMU3uZ2YhFRaHB+bawaulHsahAX4znw2T4YzH&#xA;+FEz0Jqy+H1348a5co/UxobwtG3f1bmo0CimRPGhXuVVQwFR9xnZIsM/t/B/2Dv5&#xA;D9UQWzGrwAAAAABJRU5ErkJggg==" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed" />
+      <text x="268" y="252" clip-path="url(#clipPath16)" fill="black" font-family="'Dialog'" stroke="none" xml:space="preserve">&lt;&lt;secondary&gt;&gt;</text>
+      <text x="277" y="269" clip-path="url(#clipPath17)" fill="black" font-family="'Dialog'" stroke="none" xml:space="preserve">&lt;&lt;passive&gt;&gt;</text>
     </g>
   </g>
 </svg>

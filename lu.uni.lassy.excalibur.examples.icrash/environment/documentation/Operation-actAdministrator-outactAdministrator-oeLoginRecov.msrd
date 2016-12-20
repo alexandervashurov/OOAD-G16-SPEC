@@ -6,32 +6,34 @@
 
 @@Operation
 icrash.environment.actAdministrator.outactAdministrator.oeLoginRecov
+
+
 //parameters
 @parameter
-icrash.environment.actAdministrator.outactAdministrator.oeLoginRecov.AdtPassword
+icrash.environment.actAdministrator.outactAdministrator.oeLoginRecov.AdtLogin
 ""
 @parameter
 icrash.environment.actAdministrator.outactAdministrator.oeLoginRecov.AdtKeyWord
 ""
 @endParameters
 
-@description "
- "
+@description 
+"Verification of Login and Keyword"
 //preProtocol descriptions
 @preP
-" "
+"System is started"
 @endPreP
 //preFunctional descriptions
 @preF
-" "
+"none"
 @endPreF
 //postFunctional descriptions
 @postF 
-" "
+"Capability to update the administrator password and matching confirmation"
 @endPostF
 //postProtocol descriptions
 @postP 
-" "
+"Value of vpIsLogged field of a current actor actAdministrator is set to true if validation is successful."
 @endPostP
 //example
-@example" "
+@example""

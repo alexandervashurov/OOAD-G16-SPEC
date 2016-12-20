@@ -1,0 +1,34 @@
+package usecases.uciugPassRecovery {
+	import icrash.usecases
+	import icrash.concepts.primarytypes.datatypes
+	import icrash.environment
+	import icrash.usecases.suGlobalCrisisHandling
+	import icrash.usecases.ugAdministrateTheSystem
+	import icrash.usecases.subfunctions
+
+	Use Case Model {
+
+		use case instance uciugPassRecovery:ugPassRecovery {
+			actors {
+				bill:actAdministrator
+			}
+			use case steps {
+				bill executed instanceof subfunction oeLogin("icrashadmin", "7WXC1359") {
+					ieMessage('You are logged ! Welcome ...') returned to bill
+				}
+				bill executed instanceof subfunction oeLogout {
+					ieMessage('You are logged out ! Good Bye ...') returned to bill
+				}
+				bill executed instanceof subfunction oeLoginRecov("icrashadmin", "collector") {
+					ieMessage("Your keyword accepted") returned to bill
+				}
+				bill executed instanceof subfunction oeUpdatePass("pass", "pass") {
+					ieMessage("Password changed") returned to bill
+				}
+				bill executed instanceof subfunction oeLogin("icrashadmin", "pass") {
+					ieMessage('You are logged ! Welcome ...') returned to bill
+				}
+			}
+		}
+	}
+}

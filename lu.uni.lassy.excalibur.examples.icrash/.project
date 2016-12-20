@@ -3,6 +3,8 @@
 	<name>lu.uni.lassy.excalibur.examples.icrash</name>
 	<comment></comment>
 	<projects>
+		<project>lu.uni.lassy.excalibur.standard.report.libraries</project>
+		<project>lu.uni.lassy.excalibur.standard.simulation.libraries</project>
 		<project>lu.uni.lassy.excalibur.standard.specification.libraries</project>
 	</projects>
 	<buildSpec>

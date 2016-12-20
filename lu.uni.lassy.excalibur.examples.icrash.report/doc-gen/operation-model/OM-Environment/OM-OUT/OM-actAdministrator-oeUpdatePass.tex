@@ -1,0 +1,72 @@
+\subsection{Operation Model for oeUpdatePass}
+
+\label{OM-oeUpdatePass}
+
+
+The \msrcode{oeUpdatePass} operation has the following properties:
+
+	\begin{operationmodel}
+	\addheading{Operation}
+	\adddoublerow{oeUpdatePass}{Update the administrator password and matching confirmation}
+
+	\addrowheading{Parameters}
+	\addnumbereddoublerow{}{AdtPassword: dtPassword}{New password for administrator} 
+	\addnumbereddoublerow{}{AdtKeyWord: dtKeyWord}{Keyword which an administrator already has} 
+
+	\addrowheading{Return type}
+	\addsinglerow{ptBoolean}
+
+	\addrowheading{Pre-Condition (protocol)}
+	\addnumberedsinglerow{PreP}{System is started}
+	\addnumberedsinglerow{PreP}{The actor is not logged in}
+	\addnumberedsinglerow{PreP}{Value of vpIsLogged field for current actor actAdministrator is true}
+		
+	\addrowheading{Pre-Condition (functional)}
+	\addnumberedsinglerow{PreF}{none}
+
+	\addrowheading{Post-Condition (functional)}
+	\addnumberedsinglerow{PostF}{none}
+
+	\addrowheading{Post-Condition (protocol)}
+	\addnumberedsinglerow{PostP}{The administrator password has changed}
+	\end{operationmodel}
+
+
+
+	% ------------------------------------------
+	% MCL Listing
+	% ------------------------------------------
+	\vspace{1cm}
+	The listing~\ref{OM-actAdministrator-oeUpdatePass-MCL-LST} provides the \msrmessir (MCL-oriented) specification of the operation.
+	
+	\scriptsize
+	\vspace{0.5cm}
+	\begin{lstlisting}[style=MessirStyle,firstnumber=auto,captionpos=b,caption={\msrmessir (MCL-oriented) specification of the operation \emph{oeUpdatePass}.},label=OM-actAdministrator-oeUpdatePass-MCL-LST]
+
+	/* Pre Protocol:*/ 
+	preP{let TheSystem: ctState in
+					let TheActor:actAdministrator in
+					self.rnActor.rnSystem = TheSystem
+	 				and self.rnActor = TheActor
+	 				
+	 				/* PreP01 */
+	  				and TheSystem.vpStarted = true
+					/* PreP02 */
+	 				 and TheActor.rnctAuthenticated.vpIsLogged = false
+	  				/* PreP03 */
+	  				and oeLoginRecov = true}
+	
+	
+	
+	
+	\end{lstlisting}
+	\normalsize 
+	
+	
+	
+	
+
+
+
+
+

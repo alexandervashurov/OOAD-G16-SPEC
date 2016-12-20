@@ -1,0 +1,10 @@
+/*
+@author AlexVashurov
+@date Mon Dec 19 17:46:07 MSK 2016
+*/
+
+
+@@view uc-ugPassRecovery
+@model Use-Case icrash.usecases.ugPassRecovery 
+@description ""
+@caption ""

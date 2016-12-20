@@ -1,0 +1,10 @@
+/*
+@author AlexVashurov
+@date Wed Dec 07 16:39:43 MSK 2016
+*/
+
+
+@@view operation-scope-actMsrCreator-init
+@model Operation icrash.environment.actMsrCreator.init 
+@description ""
+@caption ""

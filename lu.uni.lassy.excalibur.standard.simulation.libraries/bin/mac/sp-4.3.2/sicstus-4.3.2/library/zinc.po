@@ -1,0 +1,21 @@
+#! /bin/sh
+exec sicstus-4.3.2 -r "$0" -a "$@"
+# META_INFO 1
+# FILE: "/private/tmp/octopussy-vm-mac-os-x-10-10-build-20150508-100415/srcdir/library/zinc.po"
+# FR: "random"
+# FR: "codesio"
+# FR: "clpfd"
+# FR: "timeout"
+# META_INFO END
+version=5 archmask=0x2a05b
+xœÝš]lUÇg·jKZ¢‰‚¬Ø¤©&¢>AL´ø„†•ïò@»t§8t¿²`‹¦‹‰ÁÆ&Tl*A¶´šb¢Pñ¡MûÐ(D
+$4ÆÄ–¬šh«‰)êCíÎ=ÿÛÞãL:;Û'çÃsîoî9çÞsïÌVÓÄUR(ä=Ô. Ûñúæ™fMû`ý¶¥žÙöƒt¿ÿícfWY"°_×pgìÒ)Sê#šzµé©WL;´o>ºÑl/eœ‡nïPä	ÆªE¿¢Ø&1šë?šrêç÷•Ñîòî¼«¥ö™–Jÿ&#R'‹•~a*­·q;çÀqëœ@4Æ…¬ì7åk$1žºÃ~¥ßt³wñ mö-ãïdeÇ>ÿõ¯fåX‹Zín“Ó 7j^ê“Ï¢±	vZ>Kþ¯¸VÚEŒŒÏ¹Ÿä0ñ…?Åµã»n3åªˆõwÊÉN€§c!É;@p>¡jÙ²øÏEüd<¥kÅÌIZ,RbÐüò±vå`—|èü`£?tØÈ&
+y/sNµU4(Îp§ãzP¯7"Fd¯Œ#æ&òNðøÈïÖÇüŠ«Ã4ô4é‹‡çùixWp:¶‹6A1ãðÐ–¨‘‘×Z~ƒÖŒáÏJÆC-(œg›½xÈgÞ5À.äÃ[­QY½Ò}¡h ¨eÐûÛ• ÓC¼vAï$§xÐÁqtœbÆq:ŸyÐý×n+\øƒþúÁç«Žz5û ¯¢ðÅºäÛ.èÉÆ˜.ƒíŸVg¸€§5»`ß!gx°Áql\å6·SNvB%dê0*žºrò’_•üÆ•Žè,gœÕÔn^`Ý ê•ƒg,¢®ÙÖ•s7¬£Žã)~Ã:ê}«Ôq#êØcñì½·ŸžŽS!}çUÝÍ·F’ŽP@—¸$Õ7Ej‚©pLÛ	X’Ðê‘¤Qoèq‰=IØey`³e°&;%5CÔÒ|©‰d\„%·gFÝ³O¯KûçF{¨|ÿÍ‰šJÆRI‰ì[„ôÇ¢‰9àù†•0žŠ¨iº²s*eY!lqØD44/C£yæ=l9K'òt_Rg«ˆ>w&Ì3Ua«TM/B²Pu¨3yÎü,5­™M˜L6º8Ý¹î¨í¶oÕÃv˜toã=Im¾ƒÑÎàÁád3Ýl‚¨õl¼´<ec÷0ÝÿŒä7Ì®Ù}Gòfw’=×CÎ¯ô¨vfWAú—˜]³{•ôû˜/z¤?Êìú˜ÝG¤¿Èì†˜Ý×¤·±Ãø~'}±Wµ»Âx+HÿœxëI¿‹Ù0žAú·˜Ý(ã½Gú.;ä÷KÒ_cvŒw“ôÛØ·„ÖÅêÕn’ùñ,é«lìðÜjÒÇ™Ý4ã"ýq;ðÎ’~€ÙÍ0»«¤—ë’ÙÁ_»—†úÂ«)¾v”¶Š¯¨'SôQ&^Ò|{£<×ÛÒ©Ô3zˆ—#þzcÁqzŒåÅW³OH»:ŒçØÕáTB¯aGÙMÕ¡æŠ{âx£ävi·-ÄË~¹YS
+$Íox¸ŽÐë’Ýù}!j"šŠ×Í;¿¿¡æ!W\Ð˜w2>+$òäÍ‘5zBHþÚë¤œŽèù¥!©ÇÃÙ“¥‘4¢I-§¸-wI-'À90NèèôÄ¶úµËê‚ÁBEÿ
+Òa—¯ß—ý7-Ob5¤å,®¦ûH÷‹ô¼O‚wˆôÇ™æ-ÆAsEà<
+,&ÓUÒÿÂì0GÀû‹ô…Ìé_NA¡ÄyOP¹…ü‡ú-T]'oÉ§¾-?Nm$%¼tþªÃ\Õ‹•õÊï7ëðòÿ–õ[ˆ6déí²ŽÖ–¼`Æ¿LÐ™Öã4?à‡Ï[pÒ9s¦Öõ*œv—œá­ê/.']ú»Ô¥p2.9þË…Óã’Sû«Êg÷´ãõNÇ‡
+§Ï%ç™Ó*gÈ%gxç '÷ø´t+œ+.Ç3ÕsÞ‚ã"ï•ê|q›¯Œš÷Q—ãI¿ÜmÁÉ}}•~¬r&Üæëb—ÇEÝøM‡“.ãìkýÜ‚ã"ÎÞOÎ´ÛuÑÚkÁqQŸ3j=œq[Öf,8Îó…ã8ú£_/»¿Ð/äØ·°ï`ßuŸê6ê.ê&êêêêÖ=Ö-ÖÖæ=æ-ææòŽ¼!îˆNW&º%þÒ`ç§Ë–™Çì©-¦¼¯”þÒ`—ðÿØÂÿŠp
+# META_INFO_SUFFIX 1
+# size="0x790"
+# file="/private/tmp/octopussy-vm-mac-os-x-10-10-build-20150508-100415/srcdir/library/zinc.po"
+# META_INFO_SUFFIX END

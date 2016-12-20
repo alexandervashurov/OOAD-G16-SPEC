@@ -1,0 +1,24 @@
+
+/*
+* @author AlexVashurov
+* @date Wed Dec 07 16:52:41 MSK 2016
+*/
+package icrash.usecases {
+	import lu.uni.lassy.messir.libraries.primitives
+	import icrash.environment
+	import icrash.usecases.ugSecurelyUseSystem
+	import icrash.usecases.subfunctions
+
+	Use Case Model {
+
+		use case system usergoal ugPassRecovery() {
+			actor actAdministrator[primary, active]
+			step a:actAdministrator executes oeLoginRecov
+			step b:actAdministrator executes oeUpdatePass
+			step c:actAdministrator executes oeLogin
+			step d:actAdministrator executes oeLogout
+			ordering constraint "step(b) is possible after step(a)"
+			ordering constraint "steps (a) and (b) can be executed multiple times."
+		}
+	}
+}

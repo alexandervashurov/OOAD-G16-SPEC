@@ -211,7 +211,6 @@
   <semanticResources>documentation/View-student2.msrd</semanticResources>
   <semanticResources>documentation/View-student3.msrd</semanticResources>
   <semanticResources>documentation/View-student4.msrd</semanticResources>
-  <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/.views.msr</semanticResources>
   <semanticResources>usecases/usecaseinstance-ugSecurelyUseSystem-uciugSecurelyUseSystem.msr</semanticResources>
   <semanticResources>usecases/usecase-ugSecurelyUseSystem.msr</semanticResources>
   <semanticResources>concepts/primarytypes-datatypes.msr</semanticResources>
@@ -249,6 +248,22 @@
   <semanticResources>operations/environment/documentation/Operation-actActivator-init.msrd</semanticResources>
   <semanticResources>operations/environment/documentation/Operation-actAdministrator-init.msrd</semanticResources>
   <semanticResources>documentation/View-cm-view6.msrd</semanticResources>
+  <semanticResources>documentation/View-em-gv-02.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-oeDeleteCoordinator.msrd</semanticResources>
+  <semanticResources>operations/environment/environment-actAdministrator-oeRecoverPassword.msr</semanticResources>
+  <semanticResources>concepts/documentation/PrimaryType-Datatype-dtKeyWord.msrd</semanticResources>
+  <semanticResources>concepts/documentation/Operation-dtKeyWord-is.msrd</semanticResources>
+  <semanticResources>environment/documentation/Operation-actAdministrator-outactAdministrator-oeRecoverPassword.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-oeRecoveryPassword.msrd</semanticResources>
+  <semanticResources>operations/messir.msr</semanticResources>
+  <semanticResources>operations/outactAdministrator.oeUpdatePass.msr</semanticResources>
+  <semanticResources>operations/outactAdministrator.oeLoginRecov.msr</semanticResources>
+  <semanticResources>operations/dtNewPassword.msr</semanticResources>
+  <semanticResources>environment/documentation/Operation-actAdministrator-outactAdministrator-oeLoginRecov.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugManageCrisis-uciugManageCrisis1.msr</semanticResources>
+  <semanticResources>documentation/View-operation-scope-actMsrCreator-init.msrd</semanticResources>
+  <semanticResources>usecases/ugPassRecovery.msr</semanticResources>
+  <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/.views.msr</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/documentation/View-calendar-local-view-01.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/documentation/View-math-local-view-01.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/documentation/View-primitives-local-view-01.msrd</semanticResources>
@@ -458,18 +473,13 @@
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptInteger.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptReal.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptString.msrd</semanticResources>
-  <semanticResources>documentation/View-em-gv-02.msrd</semanticResources>
-  <semanticResources>documentation/View-uc-oeDeleteCoordinator.msrd</semanticResources>
-  <semanticResources>operations/environment/environment-actAdministrator-oeRecoverPassword.msr</semanticResources>
-  <semanticResources>concepts/documentation/PrimaryType-Datatype-dtKeyWord.msrd</semanticResources>
-  <semanticResources>concepts/documentation/Operation-dtKeyWord-is.msrd</semanticResources>
-  <semanticResources>environment/documentation/Operation-actAdministrator-outactAdministrator-oeRecoverPassword.msrd</semanticResources>
-  <semanticResources>usecases/documentation/UseCase-oeRecoveryPassword.msrd</semanticResources>
-  <semanticResources>operations/messir.msr</semanticResources>
-  <semanticResources>operations/outactAdministrator.oeUpdatePass.msr</semanticResources>
-  <semanticResources>operations/outactAdministrator.oeLoginRecov.msr</semanticResources>
-  <semanticResources>operations/dtNewPassword.msr</semanticResources>
-  <semanticResources>environment/documentation/Operation-actAdministrator-outactAdministrator-oeLoginRecov.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-oeLoginRecov.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugPassRecovery.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugManageCrisis1.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugPassRecovery.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugPassRecovery-uciugPassRecovery.msr</semanticResources>
+  <semanticResources>documentation/View-uci-uciugPassRecovery.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugPassRecovery.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_VxVZ4PWqEeSOM9Kfym77Zg">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

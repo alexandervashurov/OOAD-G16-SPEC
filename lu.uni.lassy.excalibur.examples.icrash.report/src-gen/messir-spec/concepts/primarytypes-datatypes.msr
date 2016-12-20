@@ -21,6 +21,7 @@ import lu.uni.lassy.messir.libraries.calendar
 			datatype dtPassword extends dtString {
 				operation is():ptBoolean
 			}
+		
 			datatype dtKeyWord extends dtString {
 				operation is():ptBoolean
 			}

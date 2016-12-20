@@ -1,0 +1,800 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>prologbeans</name>
+    </assembly>
+    <members>
+        <member name="T:se.sics.prologbeans.Bindings">
+            <summary> <c>Bindings</c> handles the variable bindings in the
+            communication with the prolog server. Using variable bindings
+            ensures that the values are properly quoted when sent to the
+            prolog server.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.#ctor">
+            <summary> Creates a new <c>Bindings</c> instance with no variable bindings.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.#ctor(se.sics.prologbeans.Bindings)">
+            <summary> Creates a new <c>Bindings</c> instance and copies all existing
+            variable bindings from the specified bindings.
+            </summary>
+            <param name="binds">the variable bindings to copy
+            
+            </param>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.bind(System.String,System.Int32)">
+            <summary> Adds the specified variable binding. The variable name must start
+            with an upper case letter or '_'.
+            </summary>
+            <param name="name">a prolog variable name
+            </param>
+            <param name="value">the value to bind to the variable
+            </param>
+            <returns> a reference to this <c>Bindings</c> object
+            </returns>
+            <exception cref="T:System.ArgumentException"> if the name is not a
+            valid prolog variable name
+            </exception>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.bind(System.String,System.Int64)">
+            <summary> Adds the specified variable binding. The variable name must start
+            with an upper case letter or '_'.
+            </summary>
+            <param name="name">a prolog variable name
+            </param>
+            <param name="value">the value to bind to the variable
+            </param>
+            <returns> a reference to this <c>Bindings</c> object
+            </returns>
+            <exception cref="T:System.ArgumentException"> if the name is not a
+            valid prolog variable name
+            </exception>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.bind(System.String,System.Single)">
+            <summary> Adds the specified variable binding. The variable name must start
+            with an upper case letter or '_'.
+            </summary>
+            <param name="name">a prolog variable name
+            </param>
+            <param name="value">the value to bind to the variable
+            </param>
+            <returns> a reference to this <c>Bindings</c> object
+            </returns>
+            <exception cref="T:System.ArgumentException"> if the name is not a
+            valid prolog variable name
+            </exception>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.bind(System.String,System.Double)">
+            <summary> Adds the specified variable binding. The variable name must start
+            with an upper case letter or '_'.
+            </summary>
+            <param name="name">a prolog variable name
+            </param>
+            <param name="value">the value to bind to the variable
+            </param>
+            <returns> a reference to this <c>Bindings</c> object
+            </returns>
+            <exception cref="T:System.ArgumentException"> if the name is not a
+            valid prolog variable name
+            </exception>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.bind(System.String,System.String)">
+            <summary> Adds the specified variable binding. The variable name must start
+            with an upper case letter or '_'.
+            </summary>
+            <param name="name">a prolog variable name
+            </param>
+            <param name="value">the value to bind to the variable
+            </param>
+            <returns> a reference to this <c>Bindings</c> object
+            </returns>
+            <exception cref="T:System.ArgumentException"> if the name is not a
+            valid prolog variable name
+            </exception>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.bind(System.String,se.sics.prologbeans.PBTerm)">
+            <summary> Adds the specified variable binding. The variable name must start
+            with an upper case letter or '_'.
+            </summary>
+            <param name="name">a prolog variable name
+            </param>
+            <param name="value">the value to bind to the variable
+            </param>
+            <returns> a reference to this <c>Bindings</c> object
+            </returns>
+            <exception cref="T:System.ArgumentException"> if the name is not a
+            valid prolog variable name
+            </exception>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.bindAtom(System.String,System.String)">
+            <summary> Adds the specified variable binding. The variable name must start
+            with an upper case letter or '_'. The value will be bound as an
+            atom.
+            </summary>
+            <param name="name">a prolog variable name
+            </param>
+            <param name="value">the value to bind to the variable as an atom
+            </param>
+            <returns> a reference to this <c>Bindings</c> object
+            </returns>
+            <exception cref="T:System.ArgumentException"> if the name is not a
+            valid prolog variable name
+            </exception>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.getValue(System.String)">
+            <summary> Returns the value for the specified variable or <c>null</c>
+            if the variable is not bound.
+            </summary>
+            <param name="name">the name of the variable
+            </param>
+            <returns> the value of the variable as a <c>Term</c> or
+            <c>null</c> if the variable is not bound
+            
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.Bindings.ToString">
+            <summary> For debugging.
+            </summary>
+        </member>
+        <member name="T:se.sics.prologbeans.FastParser">
+            <summary> <c>FastParser</c>
+            Documentation of the fast_write/read "protocol"
+            Each "string" looks like:
+            [PM] 3.10.2 Updated specification
+            D TYPE [type-specific data]
+            D -> start of fastrw Term (D is also the version number)
+            TYPE, one byte for type:
+            I - integer - argument is a arbitrary long, nonempty string of
+            ASCII decimal digits, prefixed by a minus sign if negative
+            There should be no plus sign prefixed. There is no size restriction.
+            F - float - argument is an ASCII string of digits with a decimal
+            point preceeded by at least one digit, optionally using
+            E-notation (capital E) with exponent optionally prefixed by
+            minus sign. The floating point number is prefixed by minus if
+            negative
+            A - atom - argument is an ATOMNAME (*)
+            Make UTF-8 explicit (QP loses here). (Luckily this should be exactly
+            the Java String.getbytes bytes.)
+            _ - variable (followed by DATA which is a string of digits). The
+            variables are numbered 0..n in depth first traversal
+            increasing argument order. This is the change in version 'D'
+            compared to version 'C'. The variable numbering is strictly defined.
+            S ATOMNAME n - compound with n terms [followed by n terms] - n is
+            an (unsigned) byte
+            " - a list prefix consisting of only integers in [1..255] (*)
+            the sequence is terminated by zero byte followed by the tail
+            term. Note that this is just a compact representation of
+            nested compound terms with functor ./2.
+            Example "ab", i.e., .(97, .(98, [])) becomes (using C
+            char-constant notation) '"' 'a' 'b' '\0' ']'; [x,97,98|y]
+            becomes '[' 'A' 'x' '\0' '"' 'a' 'b' '\0' 'A' 'y' '\0'
+            > Clarified that this encoding is used for any "list"-prefix with
+            > suitable elements. In particular it is not always followed by ']'.
+            > Also note that the elements of this kind of list should *not* be
+            > treated by the reader as individual bytes of an UTF-8 encoded
+            > string. If a list is to be treated as a string then each element
+            > should be treated as a single UNICODE character, this holds for
+            > lists transmitted using any of the three ('"', '[' or 'S' '.' '\0'
+            > '\2') possible serialization-formats.
+            >
+            [ - a list cell, i.e, a shortcut for 'S' '.' '\0' '\2' (*)
+            ] - empty list, i.e, a shortcut for 'A' '[' ']' '\0' (*)
+            DATA - a byte sequence terminated by '\0'
+            NOTE: As of verson 'D' the numbering must be sequential from
+            _0.._n, the prolog side fast_read will most likely
+            crash if * this invariant is not maintained when
+            sending data to * prolog.
+            ATOMNAME is DATA where the bytes make up the UTF-8 name of the
+            atom.
+            (*) These could be optional in the writer since there are longer
+            equivalent forms from which the reader could produce the same term.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.FastParser.validTerm(se.sics.prologbeans.PBTerm)">
+            <summary> [PM] 4.1.3 Traverse the term and verify that no null arguments remain
+            (for assertions).
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.FastParser.Work.bump(se.sics.prologbeans.PBTerm)">
+            <summary> Update top of stack. Return the resulting stack, i.e. either 'this'
+            or this.next.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.FastWriter.WriteWork.bump">
+            <summary> Get next term to process at this level or null. If null is returned
+            then use getNext() to pop this level
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.FastWriter.WriteWork.prune">
+            <summary> Pop exhausted stack entries and return the resulting stack (which may
+            be null).
+            </summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBAtom">
+            <summary> <code>PBAtom</code> is the representation of Prolog atoms.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBAtomic">
+            <summary> <code>PBAtomic</code> is the representation
+            of Prolog constants.
+            </summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBTerm">
+            <summary> <code>PBTerm</code> is the representations
+            of Prolog terms.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isAtom">
+            <summary> See the Atom property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isAtomic">
+            <summary> See the Atomic property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isNumber">
+            <summary> See the Number property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isInteger">
+            <summary> See the Integer property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isBignum">
+            <summary> See the Bignum property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isFloat">
+            <summary> See the Float property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isCompound">
+            <summary> See the Compound property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isListCell">
+            <summary> See the ListCell property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isProperList">
+            <summary>Getter for ProperList property</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isEmptyList">
+            <summary> See the EmptyList property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isVariable">
+            <summary>Getter for Variable property</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.getName">
+            <summary> See the Name property.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.getArity">
+            <summary> See the Arity property.</summary>
+        </member>
+        <member name="F:se.sics.prologbeans.PBTerm.NIL">
+            <summary> The {@link se.sics.prologbeans.PBTerm} <code>NIL</code>, with the
+            printname "[]", represents the empty list.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.#ctor(System.String)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance with the
+            specified name.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.isString">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            proper list and all of its elements are character codes or one character
+            atoms. Returns <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a string
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.head">
+            <summary> Returns the head of this {@link se.sics.prologbeans.PBTerm} if it is a
+            list cell, i.e. a compound term with the functor ./2.
+            
+            </summary>
+            <returns> the head of the list
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.tail">
+            <summary> Returns the tail of this {@link se.sics.prologbeans.PBTerm} if it is a
+            list cell, i.e. a compound term with the functor ./2.
+            
+            </summary>
+            <returns> the tail of the list
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.getArgument(System.Int32)">
+            <summary>The ONE BASED argument if this is a compound term</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.length">
+            <summary> If this {@link se.sics.prologbeans.PBTerm} is a proper list, returns its
+            length.
+            </summary>
+            <returns> the length of the list
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.intValue">
+            <summary> Returns the integer value, as a long, if this is an integer term</summary>
+            <returns> the integer value of the term
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.bigIntegerValue">
+            <summary> Returns the integer value, as a BigInteger, if this is an integer term</summary>
+            <returns> the integer value of the term
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.floatValue">
+            <summary> Returns the floating-point valuem, if this is a floating point term.</summary>
+            <returns> the floating point value of the term
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.getString">
+            <summary> If this is a proper list and all its
+            elements are Unicode character codes, either as integers or as one-character atoms,
+            returns a  string with the list elements as the character codes of the string.
+            
+            </summary>
+            <returns> the {@link string} corresponding to this list
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.toPrologString">
+            <summary> For internal use by PrologBeans.
+            
+            Returns a string representation of this term in a format that can be
+            parsed by a Prolog parser.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.ToString">
+            <summary> Returns a string description of this term.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(System.Single)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing a
+            float value.
+            </summary>
+            <param name="value">should be finite
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(System.Double)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing a
+            double value.
+            </summary>
+            <param name="value">should be finite
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(System.Int32)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing an
+            int value.
+            </summary>
+            <param name="value">the value to represent
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(System.Int64)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing a
+            long value.
+            </summary>
+            <param name="value">the value to represent
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(System.Numerics.BigInteger)">
+            <summary> Creates a PBTerm instance representing a BigInteger value.
+            </summary>
+            <param name="value">the non-null value to represent
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(System.String)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing a
+            list with the characters, as integer values, in the string argument as
+            its elements.
+            </summary>
+            <param name="value">the non-null value to represent
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(System.String,se.sics.prologbeans.PBTerm[])">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing a
+            compound term.
+            </summary>
+            <param name="name">the name of the term
+            </param>
+            <param name="arguments">the, non-empty, arguments of the term
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeTerm(se.sics.prologbeans.PBTerm,se.sics.prologbeans.PBTerm)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing a
+            list cell.
+            </summary>
+            <param name="head">the first argument of the list cell
+            </param>
+            <param name="tail">the second argument of the list cell
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.makeAtom(System.String)">
+            <summary> Creates a new {@link se.sics.prologbeans.PBTerm} instance representing an
+            atom.
+            </summary>
+            <param name="value">the non-null name of the atom
+            </param>
+            <returns> a term representing the argument
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBTerm.fastWritePrefix(se.sics.prologbeans.FastWriter)">
+            <summary> Write fastrw prefix. Return array of arguments that should be written
+            after the prefix. The returned array may be empty but never null. Note
+            that the returned array may have no direct relationship to the arguments
+            of the term, e.g. when writing a list in compact string notation.
+            
+            </summary>
+            <throws>  IOException </throws>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Atom">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is
+            an atom and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is an atom
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Atomic">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            constant (e.g. integer, floating-point number, or atom) and
+            <code>false</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            compound term or variable.
+            </summary>
+            <returns> whether the argument is an atomic term
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Number">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            number and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a number
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Integer">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is
+            an integer and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is an integer
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Bignum">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is
+            an bignum integer and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a bignum integer
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Float">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            floating-point number and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a floating-point number
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Compound">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            compund term and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a compound term
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.ListCell">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            list cell, i.e. a compound term with the functor ./2, and
+            <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a list cell
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.ProperList">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            proper list and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a proper list
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.EmptyList">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is
+            the empty list and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is an empty list
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Variable">
+            <summary> Returns <code>true</code> if this {@link se.sics.prologbeans.PBTerm} is a
+            variable and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the argument is a variable
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Name">
+            <summary> Returns the name of this constant or compound term.</summary>
+            <returns> the name of the term
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PBTerm.Arity">
+            <summary> Returns the number of arguments of this compound term or 0 if this
+            {@link se.sics.prologbeans.PBTerm} is not a compound term.
+            </summary>
+            <returns> the arity of the term
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PBAtomic.#ctor(System.String)">
+            <summary> Creates a new <code>PBAtomic</code> instance with the specified name.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBAtom.#ctor(System.String)">
+            <summary> Creates a new <code>PBAtom</code> instance with the specified name.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBBignum">
+            <summary> <code>PBBignum</code> is the representation of large Prolog integers.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBCompound">
+            <summary> <code>PBCompound</code> is the
+            representation of Prolog compound terms.
+            </summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBFloat">
+            <summary> <code>PBFloat</code> is the representation of Prolog integers.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBFloat.#ctor(System.Double)">
+            <summary> Creates a new <code>PBFloat</code> instance with the specified value.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBInteger">
+            <summary> <code>PBInteger</code> is the representation of Prolog integers.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBInteger.#ctor(System.Int64)">
+            <summary> Creates a new <code>PBInteger</code> instance with the specified value.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBListCell">
+            <summary> <code>PBListCell</code> is the 
+            representation of Prolog list cells, i.e. compound terms with the functor
+            ./2.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBListCell.head">
+            <summary> Returns the head of this list cell.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBListCell.tail">
+            <summary> Returns the tail of this list cell.</summary>
+        </member>
+        <member name="P:se.sics.prologbeans.PBListCell.TrueString">
+            <summary> Returns <code>true</code> if this <code>PBTerm</code> is a proper list
+            and all of its elements are character codes. Returns <code>false</code>
+            otherwise.
+            </summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBMonitor">
+            <summary> <code>PBMonitor</code> is used to supervise and cancel queries that
+            takes too long time.
+            </summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBNil">
+            <summary> <code>PBNil</code> is the representation of the empty list, [].</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBNil.#ctor">
+            <summary> Creates a new <code>PBNil</code> instance with the specified name.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PBVariable">
+            <summary> <code>PBVariable</code> is the
+            representation of Prolog variables.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PBVariable.#ctor(System.String)">
+            <summary> Creates a new <code>PBVariable</code> instance with the specified name.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.PrologSession">
+            <summary> <code>PrologSession</code> handles the connection with the Prolog Server.
+            Currently only synchronous connections with the server are supported.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.getTimeout">
+            <summary> The timeout in milliseconds before the connection to the Prolog
+            server is reset (when a query is not answered). Setting the timeout to
+            <code>0</code> will disable timeouts for this prolog session. Default is
+            2000 milliseconds.
+            
+            When a connection times out it will be closed silently.
+            
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.setTimeout(System.Int32)">
+            <summary> The timeout in milliseconds before the connection to the Prolog
+            server is reset (when a query is not answered). Setting the timeout to
+            <code>0</code> will disable timeouts for this prolog session. Default is
+            2000 milliseconds.
+            
+            When a connection times out it will be closed silently.
+            
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.getPort">
+            <summary> the port of the Prolog server (default <code>8066</code>).</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.setPort(System.Int32)">
+            <summary> the port of the Prolog server (default <code>8066</code>).</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.getHost">
+            <summary> The host of the Prolog server (default is <code>localhost</code>).
+            The host can be specified as either IP-address or host name.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.setHost(System.String)">
+            <summary> The host of the Prolog server (default is <code>localhost</code>).
+            The host can be specified as either IP-address or host name.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.isAlwaysClosing">
+            <summary> whether to close connections after each send. Default <tt>false</tt>.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.setAlwaysClose(System.Boolean)">
+            <summary> whether to close connections after each send. Default <tt>false</tt>.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.isAutoConnecting">
+            <summary> The connection mode of this <code>PrologSession</code>. If set to
+            <code>true</code> it will ensure that it is connected to the Prolog
+            server as soon as a call to
+            {@link se.sics.prologbeans.PrologSession#executeQuery executeQuery()} or
+            anything else causing a need for communication happens. This is by
+            default set to <code>false</code>.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.setAutoConnect(System.Boolean)">
+            <summary> The connection mode of this <code>PrologSession</code>. If set to
+            <code>true</code> it will ensure that it is connected to the Prolog
+            server as soon as a call to
+            {@link se.sics.prologbeans.PrologSession#executeQuery executeQuery()} or
+            anything else causing a need for communication happens. This is by
+            default set to <code>false</code>.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.isConnected">
+            <summary> Returns <code>true</code> if a connection with the Prolog server is open
+            and <code>false</code> otherwise.
+            </summary>
+            <returns> whether there is a connection to a Prolog server.</returns>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.debugging">
+            <summary> whether debugging of this package is in effect.</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.#ctor">
+            <summary> Creates a new <code>PrologSession</code> instance with default Prolog
+            server settings.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.getPrologSession(System.String)">
+            <summary>FIXME: CS1591: Missing XML comment for publicly visible type or member `se.sics.prologbeans.PBTerm.bigIntegerValue()'</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.executeQuery(System.String)">
+            <summary>FIXME: CS1591: Missing XML comment for publicly visible type or member `se.sics.prologbeans.PBTerm.bigIntegerValue()'</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.executeQuery(System.String,se.sics.prologbeans.Bindings)">
+            <summary>FIXME: CS1591: Missing XML comment for publicly visible type or member `se.sics.prologbeans.PBTerm.bigIntegerValue()'</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.executeQuery(System.String,se.sics.prologbeans.Bindings,System.String)">
+            <summary>FIXME: CS1591: Missing XML comment for publicly visible type or member `se.sics.prologbeans.PBTerm.bigIntegerValue()'</summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.connect">
+            <summary> Connects to the Prolog server. By default
+            {@link se.sics.prologbeans.PrologSession#executeQuery executeQuery()}
+            will automatically connect to the server when called.
+            </summary>
+            <throws>  IOException if there is an error connecting </throws>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.disconnect">
+            <summary> Closes the connection with the Prolog server. The connection can be
+            opened again with {@link se.sics.prologbeans.PrologSession#connect
+            connect()}.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.PrologSession.cancelQuery">
+            <summary> Called by the timeout monitor when a query takes too long. Override this
+            method to handle the timeout in some way other than silently closing the
+            connection.
+            </summary>
+        </member>
+        <member name="P:se.sics.prologbeans.PrologSession.Timeout">
+            <summary> The timeout in milliseconds before the connection to the Prolog
+            server is reset (when a query is not answered). Setting the timeout to
+            <code>0</code> will disable timeouts for this prolog session. Default is
+            2000 milliseconds.
+            
+            When a connection times out it will be closed silently.
+            
+            </summary>
+        </member>
+        <member name="P:se.sics.prologbeans.PrologSession.Port">
+            <summary> the port of the Prolog server (default <code>8066</code>).</summary>
+        </member>
+        <member name="P:se.sics.prologbeans.PrologSession.Host">
+            <summary> The host of the Prolog server (default is <code>localhost</code>).
+            The host can be specified as either IP-address or host name.
+            </summary>
+        </member>
+        <member name="P:se.sics.prologbeans.PrologSession.AlwaysClose">
+            <summary> whether to close connections after each send. Default <tt>false</tt>.</summary>
+        </member>
+        <member name="P:se.sics.prologbeans.PrologSession.AutoConnect">
+            <summary> The connection mode of this <code>PrologSession</code>. If set to
+            <code>true</code> it will ensure that it is connected to the Prolog
+            server as soon as a call to
+            {@link se.sics.prologbeans.PrologSession#executeQuery executeQuery()} or
+            anything else causing a need for communication happens. This is by
+            default set to <code>false</code>.
+            </summary>
+        </member>
+        <member name="P:se.sics.prologbeans.PrologSession.Connected">
+            <summary> Returns <code>true</code> if a connection with the Prolog server is open
+            and <code>false</code> otherwise.
+            </summary>
+            <returns> whether there is a connection to a Prolog server
+            </returns>
+        </member>
+        <member name="P:se.sics.prologbeans.PrologSession.Debugging">
+            <summary> whether debugging of this package is in effect.</summary>
+        </member>
+        <member name="T:se.sics.prologbeans.QueryAnswer">
+            <summary> <code>QueryAnswer</code> is the
+            representation of an answer from the Prolog server. The
+            <code>QueryAnswer</code> is returned by
+            {@link se.sics.prologbeans.PrologSession} in response to a query and contains
+            variable bindings, errors, and success/failure information. It also contains
+            the variable bindings specified in the query.
+            </summary>
+        </member>
+        <member name="M:se.sics.prologbeans.QueryAnswer.#ctor(se.sics.prologbeans.PBTerm,se.sics.prologbeans.Bindings)">
+            <summary> Creates a new <code>QueryAnswer</code> instance with the specified
+            information.
+            
+            </summary>
+            <param name="answer">
+            a {@link se.sics.prologbeans.PBTerm} value representing the
+            Prolog response
+            </param>
+            <param name="bindings">the variable bindings for the query to which this is an answer
+            </param>
+        </member>
+        <member name="M:se.sics.prologbeans.QueryAnswer.getValue(System.String)">
+            <summary> Returns the value of the specified variable or <code>null</code> if the
+            variable is not bound.
+            
+            </summary>
+            <param name="name">the name of the variable
+            </param>
+            <returns> the value of the variable as a {@link se.sics.prologbeans.PBTerm}
+            or <code>null</code> if the variable is not bound
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.QueryAnswer.queryFailed">
+            <summary> Returns <code>true</code> if the query failed (i.e. the Prolog responded
+            with 'no') and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the query failed
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.QueryAnswer.isError">
+            <summary> Returns <code>true</code> if an error occurred while processing the query
+            and <code>false</code> otherwise.
+            </summary>
+            <returns> whether the query threw an exception
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.QueryAnswer.getError">
+            <summary> Returns the error reason or <code>null</code> if an error has not
+            occurred or if no error reason is known.
+            </summary>
+            <returns> the error, or null, if none
+            </returns>
+        </member>
+        <member name="M:se.sics.prologbeans.QueryAnswer.ToString">
+            <summary> Returns a string description of this answer.</summary>
+        </member>
+    </members>
+</doc>

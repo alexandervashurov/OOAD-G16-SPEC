@@ -32,7 +32,7 @@ import lu.uni.lassy.messir.libraries.calendar
 											(AdtPassword:dtPassword 
 											) :ptBoolean
 				operation oeLoginRecov
-											(AdtPassword:dtLogin,
+											(AdtLogin:dtLogin,
 											AdtKeyWord:dtKeyWord):ptBoolean
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,
@@ -47,6 +47,7 @@ import lu.uni.lassy.messir.libraries.calendar
 				
 				operation ieCoordinatorAdded():ptBoolean
 				operation ieCoordinatorDeleted():ptBoolean
+				//lj,fdbnm cjj,
 	 		}
 		}
 		
@@ -95,7 +96,8 @@ import lu.uni.lassy.messir.libraries.calendar
 										AdtTime:dtTime , 
 										AdtPhoneNumber:dtPhoneNumber ,
 										AdtGPSLocation:dtGPSLocation , 
-										AdtComment:dtComment 
+										AdtComment:dtComment,
+										ADeadline:dtDateAndTime 
 										):ptBoolean
 			}
 			

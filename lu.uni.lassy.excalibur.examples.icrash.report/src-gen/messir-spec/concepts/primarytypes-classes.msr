@@ -34,12 +34,15 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute location:dtGPSLocation
 				attribute instant:dtDateAndTime
 				attribute comment:dtComment
+				attribute deadline:dtDateAndTime
 				
 				operation init(     	Aid:dtAlertID ,
 										Astatus:etAlertStatus ,
 										Alocation:dtGPSLocation ,
 										Ainstant:dtDateAndTime ,
-										Acomment:dtComment ):ptBoolean
+										Acomment:dtComment,
+										Adeadline:dtDateAndTime
+										 ):ptBoolean
 				operation isSentToCoordinator(AactCoordinator:actCoordinator ):ptBoolean
 			 
 			}
@@ -51,6 +54,7 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute location:dtGPSLocation
 				attribute instant:dtDateAndTime
 				attribute comment:dtComment
+				attribute deadline:dtDateAndTime
 				
 				operation init(
 										Aid:dtCrisisID ,
@@ -58,7 +62,9 @@ import lu.uni.lassy.messir.libraries.calendar
 										Astatus:etCrisisStatus ,
 										Alocation:dtGPSLocation ,
 										Ainstant:dtDateAndTime ,
-										Acomment:dtComment ):ptBoolean
+										Acomment:dtComment,
+										Adeadline:dtDateAndTime
+										):ptBoolean
 										
 				operation handlingDelayPassed():ptBoolean
         operation maxHandlingDelayPassed():ptBoolean
@@ -111,11 +117,14 @@ import lu.uni.lassy.messir.libraries.calendar
 					
 					extends ctAuthenticated{
 					attribute keyWord:dtKeyWord
-		
-				operation init(
+					attribute Password:dtPassword
+					attribute alogin:dtLogin
+					attribute vpIsLogged:ptBoolean
+			    	operation init(
 										Alogin:dtLogin ,
 										Apwd:dtPassword,
-										AkeyWord:dtKeyWord):ptBoolean
+										AkeyWord:dtKeyWord
+										):ptBoolean
 			}
 			
 			

@@ -20,7 +20,8 @@ operation: actComCompany.outactComCompany.oeAlert(
  AdtTime:dtTime,
  AdtPhoneNumber:dtPhoneNumber,
  AdtGPSLocation:dtGPSLocation,
- AdtComment:dtComment
+ AdtComment:dtComment,
+ Adeadline:dtDateAndTime
 ):ptBoolean{
 
 preP{

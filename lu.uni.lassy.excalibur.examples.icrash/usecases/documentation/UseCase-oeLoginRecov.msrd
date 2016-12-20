@@ -1,0 +1,27 @@
+/*
+@author AlexVashurov
+@date Wed Dec 07 20:05:04 MSK 2016
+*/
+
+
+@@Use Case Subfunction icrash.usecases.subfunctions.oeLoginRecov
+@description ""
+@parameter icrash.usecases.subfunctions.oeLoginRecov.AdtLogin ""
+@parameter icrash.usecases.subfunctions.oeLoginRecov.AdtKeyWord ""
+@endParameters
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"

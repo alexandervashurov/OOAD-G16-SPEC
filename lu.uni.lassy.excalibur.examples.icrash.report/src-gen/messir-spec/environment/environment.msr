@@ -28,10 +28,12 @@ import lu.uni.lassy.messir.libraries.calendar
 			operation init():ptBoolean
 
 			output interface outactAdministrator{
-				operation oeRecoverPassword(
-											AdtLogin:dtLogin,
+				operation oeUpdatePass
+											(AdtPassword:dtPassword 
+											) :ptBoolean
+				operation oeLoginRecov
+											(AdtLogin:dtLogin,
 											AdtKeyWord:dtKeyWord):ptBoolean
-				
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,
 											AdtLogin:dtLogin , 
@@ -45,6 +47,7 @@ import lu.uni.lassy.messir.libraries.calendar
 				
 				operation ieCoordinatorAdded():ptBoolean
 				operation ieCoordinatorDeleted():ptBoolean
+				//lj,fdbnm cjj,
 	 		}
 		}
 		
@@ -93,7 +96,8 @@ import lu.uni.lassy.messir.libraries.calendar
 										AdtTime:dtTime , 
 										AdtPhoneNumber:dtPhoneNumber ,
 										AdtGPSLocation:dtGPSLocation , 
-										AdtComment:dtComment 
+										AdtComment:dtComment,
+										ADeadline:dtDateAndTime 
 										):ptBoolean
 			}
 			

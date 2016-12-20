@@ -1,0 +1,14 @@
+#! /bin/sh
+exec sicstus-4.3.2 -r "$0" -a "$@"
+# META_INFO 1
+# FILE: "/tmp/octopussy-vm-centos-x86-6-5-build-20150508-135213/srcdir/library/arrays3.po"
+# META_INFO END
+version=5 archmask=0x2d05a
+xœV]h\E>w[“ÍJ[ãOmH›M4$©)Ú¬¢(b£PƒOjl|Øä¶{W7Ù°wÓÑv}ŠqU_R|‰]”MA"‚²‚‚µ"MÞ|*éƒ´/Q)4úÏwæ\v6ÙÝ:p¸3g¾™9?ßœ;DD{‰ø»ƒå÷ûîÿÎ]*ÒðRŒþ8ÝK¾{Ê#‡góÐû¹qÐîcù<£]Š¹ð[7µ}OtýïÇè«/»å¬™)…­ÿŒ»'º™Œ;í?*øužþ:gSïÌjÎˆýØM«Þ)ñ¥ÓÚ7Êã;,»®þò±Ø…µ°+;=áQˆ'WyÊhcŽho4|ä¹§ä»Ìs/“ql¼S7¼t½ÂI´î-¡·1‹ŒI¦<_g8wò§w¨¹*í,²‡'R25å”=©Ïf&=Š¨•|°H7¼Ñˆpœ-2¡ÉQ“bîV{5tS¿ù8I:oV>í¨_g*í&¼DûhÚM‰#ËÀ$/aìF[ø•¬/!YäƒÃŠ±Ãxðçâ¶0ži7ÁÁÁßöÐ‹ÿ´…¿øû×rÌ¤ï¥“)Oà¯v•éWžJžÈ¸™iÁþ¤~ÖÄ¦G9ô-…LzjATž7ŒÔA{SC’LAÏ1º©:é[àùB9éÕÀnÆàB¡L»Z@WÅÿ4Œûúv‡û^V€—o·e*éd)Z?öVJóõ¡~z2sÒ@§â†Lµ ‰¤IçüyÃîPœ´Æ®ú^ãpà5¢Ýu€Y/364‘ö“Ùdz\V<1LÔ\gE§ŸÍx®µ(¢·%¸Î¸¢A{Ì1×¹‡o8Ç7ó¨¢¨®Kæ9¨ÉÉ	õû¸ÿŒá¶“×t”å˜êæT7È2¢:Ð°•ûc,o©nAuï²| º¢ê>aùLu`ÑƒÜ?¯>@ÂÜÃýïX.±á¼€°{…ÇWTÀ§ßyü—êl$rƒÇŽÑ!gÀírÌÐ!=-Ž=Ôz/ÛÅòûì·°¥Ä%ã³•%	o7uN˜ó:0ÉC³Ž9ÐžôŸ—:Œ]âžm©,qÅTKl™Äö·%±MðµÍÍÍ7^8†oàŒ°::«1rª´íïVŒmÛ®Åmå·T¨äöÅ­E‚+ÔP6=$7;¢»Vûë|«Þ\çSÐ`Â}@q{©üça
+8ðtµiÐÏ¦i@?›¦Å*4-)Õlš”´iÐÞ¦ip=lºä­Z#›3tyÓ›–L¬³º|<GmŽyle	0v&V¯mc	0ÕXr—Æu™×»r2oÛ:/ÿD±?¦l[3^ÂIŽ'ÇGÅd¼µ0ÅË¶‘g_ßš˜ŒmòFìÆ6“	LÞc=ñžV“oñ5ÏÉ@¥À+üÉ¤n€-J–{°÷øØIy'ÎrHú8—Ó·o’¢ÉeÝ¿&˜…z˜¦‚)ÖÁ,7^ÛP³úÍ5Á0½Bµ0{æ
+9ª…9û¯ñ+_ƒØcùÁ»=xû"FÁÛ±ïð¶Ã6œ½ÃêOÐð¾†yÄ¾7(& \5Œø³îÊ˜+º3Ÿï=Öwù£^¡ÆÑ—ˆúßY¤¥«1
+ŠY@ã};Í>ƒÝ­>@šs¡á³>µ6¢å+§Í˜¹ö‰µÎO
+# META_INFO_SUFFIX 1
+# size="0x5a5"
+# file="/tmp/octopussy-vm-centos-x86-6-5-build-20150508-135213/srcdir/library/arrays3.po"
+# META_INFO_SUFFIX END

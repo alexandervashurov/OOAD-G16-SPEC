@@ -1,0 +1,95 @@
+\subsection{Operation Model for oeLoginRecov}
+
+\label{OM-oeLoginRecov}
+
+
+The \msrcode{oeLoginRecov} operation has the following properties:
+
+	\begin{operationmodel}
+	\addheading{Operation}
+	\adddoublerow{oeLoginRecov}{Verification of Login and Keyword}
+
+	\addrowheading{Parameters}
+	\addnumbereddoublerow{}{AdtLogin: dtLogin}{} 
+	\addnumbereddoublerow{}{AdtKeyWord: dtKeyWord}{} 
+
+	\addrowheading{Return type}
+	\addsinglerow{ptBoolean}
+
+	\addrowheading{Pre-Condition (protocol)}
+	\addnumberedsinglerow{PreP}{System is started}
+		
+	\addrowheading{Pre-Condition (functional)}
+	\addnumberedsinglerow{PreF}{none}
+
+	\addrowheading{Post-Condition (functional)}
+	\addnumberedsinglerow{PostF}{Capability to update the administrator password and matching confirmation}
+
+	\addrowheading{Post-Condition (protocol)}
+	\addnumberedsinglerow{PostP}{Value of vpIsLogged field of a current actor actAdministrator is set to true if validation is successful.}
+	\end{operationmodel}
+
+
+
+	% ------------------------------------------
+	% MCL Listing
+	% ------------------------------------------
+	\vspace{1cm}
+	The listing~\ref{OM-actAdministrator-oeLoginRecov-MCL-LST} provides the \msrmessir (MCL-oriented) specification of the operation.
+	
+	\scriptsize
+	\vspace{0.5cm}
+	\begin{lstlisting}[style=MessirStyle,firstnumber=auto,captionpos=b,caption={\msrmessir (MCL-oriented) specification of the operation \emph{oeLoginRecov}.},label=OM-actAdministrator-oeLoginRecov-MCL-LST]
+
+	/* Pre Protocol:*/ 
+	preP{let TheSystem: ctState in
+					let TheActor:actAdministrator in
+					self.rnActor.rnSystem = TheSystem
+	 				and self.rnActor = TheActor
+	 				
+	 				/* PreP01 */
+	  				and TheSystem.vpStarted = true
+					/* PreP02 */
+	 				 and TheActor.rnctAuthenticated.vpIsLogged = false}
+	
+	
+	/* Post Functional:*/ 
+	postF{let TheSystem: ctState in
+	  				let AptStringMessageForTheactAdministrator:ptString in
+	  
+	  				self.rnActor.rnSystem = TheSystem
+	 				and self.rnActor = TheActor
+	  
+	  				and /* PostF01 */
+	   				   if (TheactAuthenticated.rnctAuthenticated.keyWord
+	         				 = AdtKeyword
+	          				and TheactAuthenticated.rnctAuthenticated.login
+	             			 = AdtLogin
+	     				    )
+	     			 then (AptStringMessageForTheactLoginRecov.eq('Write your new password here...')
+	          			  and TheactLogingRecov.rnInterfaceIN^ieMessage(AptStringMessageForTheactLoginRecov)
+	          			 )
+	      			else (AptStringMessageForTheactLoginRecov
+	          			  .eq('Wrong identification information ! Please try again ...')
+	          			  and TheactLoginRecov.rnInterfaceIN^ieMessage(AptStringMessageForTheactLoginRecov)
+	           			 and AptStringMessageForTheactAdministrator.eq('Intrusion tentative !')
+	          			  and TheSystem.rnactAdministrator
+	           			     .rnInterfaceIN^ieMessage(AptStringMessageForTheactAdministrator)
+						
+	           		and /* PostF02 */
+	           		and oeLoginRecov = true
+	           )
+	      endif}
+	
+	
+	\end{lstlisting}
+	\normalsize 
+	
+	
+	
+	
+
+
+
+
+

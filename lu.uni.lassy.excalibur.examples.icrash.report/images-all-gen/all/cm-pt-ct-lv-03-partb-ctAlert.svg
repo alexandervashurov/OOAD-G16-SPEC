@@ -69,12 +69,12 @@
         <path d="M10 36 L473 36 L473 196 L10 196 L10 36 Z" />
       </clipPath>
     </defs>
-    <g font-size="8" fill="rgb(131,122,133)" font-family="'Lucida Sans'" stroke-linejoin="round" stroke="rgb(131,122,133)" stroke-width="0" stroke-miterlimit="0">
+    <g font-size="8" fill="rgb(131,122,133)" stroke-linejoin="round" stroke="rgb(131,122,133)" stroke-width="0" stroke-miterlimit="0">
       <rect x="11" y="11" clip-path="url(#clipPath1)" width="463" rx="0" opacity="0.2549" ry="0" height="186" stroke="none" />
       <rect x="12" y="12" clip-path="url(#clipPath1)" width="463" rx="0" opacity="0.2549" ry="0" height="186" stroke="none" />
       <rect x="10" y="10" clip-path="url(#clipPath2)" fill="url(#linearGradient1)" width="463" rx="0" ry="0" height="186" stroke="none" />
     </g>
-    <g stroke-width="1.1" font-size="8" font-family="'Lucida Sans'" stroke-linecap="butt">
+    <g font-size="8" stroke-width="1.1" stroke-linecap="butt">
       <rect x="10" y="10" clip-path="url(#clipPath2)" fill="none" width="462" rx="0" ry="0" height="185" />
       <image width="17" xlink:show="embed" xlink:type="simple" clip-path="url(#clipPath3)" preserveAspectRatio="none" font-weight="bold" height="17" x="207" y="15" font-size="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAACXklEQVR42q1TS2gT&#xA;YRD+9mHTkm6ailbTFtJSTxXa2FI9mIhYijRbFYrQg2cpwWIO3jz06EFExENqW/BQ&#xA;L7EHD6WJrehFQT0oJml8gBgUigETGw3Nc7v7O0mJ2Wz34MGBXf7H/N98880MB6PN&#xA;z+9DuTwI8GNQtSFwrA0c9xsaFwMvrIM5o/B7S/onXAPA3FwXFGWWALxgrHtPALAk&#xA;QEDN4nVMTydrp8Lf+8XFQyiVg2DcJO1sMDVOIiAXdlQPJuQgwuFyHSQQaEdJeUSr&#xA;U/g36yKmwzh/7glCoRxfPdrRLlJiJ/bEpc8pSbCKogkpbpTeXdr1W1qyIpNdJZqn&#xA;9T6Xj/bjpvsk7BYL6ashENuA//kLsAaJ2Eu0SbKI7e1e2vTqJXY7HFgYPYOVRAJ3&#xA;IzGM9zhxbegYIuk07n/4qGfTh2yhT4SqSuDRoQ8xMziAVL6AqcfrKKoqnm1uYqtY&#xA;RE5RjEkdgMhsIjSeOFQQ6ij9+9sRpagVgJrdePPWtFxEguNBCVFDpfQ333M59Nik&#xA;Bu9bpM9VYmiwNKWU5UmPBJH4pr+5txHHEbsdtz1uDHccxOzxkaomCgls4JGAIHwR&#xA;qg0jT7RSOmN0XC35p8wvJIlN5aHf5YKnsxN33kWMKWnEIoCZK093G0BrDgIFmYDO&#xA;1jwW4u+rX3erFalCASXVwIIhiibhQb1j11byGL/wCkydJIoNLZ8tK1AZM2oRgUWc&#xA;gs/3tXF21lYzkL0PaXWY5sdBYFaTYvykXwhNoo8APptPccWWl1vwY2sEqiLT7QBl&#xA;3kLVK5JrHJwQhkV4TROcx/+2P+PH3fjMRNX+AAAAAElFTkSuQmCC" xlink:actuate="onLoad" />
       <text x="227" font-size="14" y="29" clip-path="url(#clipPath4)" stroke="none" font-weight="bold" xml:space="preserve">ctAlert</text>
