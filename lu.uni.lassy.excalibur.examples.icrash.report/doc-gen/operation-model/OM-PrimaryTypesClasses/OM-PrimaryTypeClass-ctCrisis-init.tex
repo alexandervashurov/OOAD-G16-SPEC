@@ -16,6 +16,9 @@ The \msrcode{init} operation has the following properties:
 	\addnumbereddoublerow{}{Alocation: dtGPSLocation}{used to initialize the location field} 
 	\addnumbereddoublerow{}{Ainstant: dtDateAndTime}{used to initialize the instant field} 
 	\addnumbereddoublerow{}{Acomment: dtComment}{used to initialize the comment field} 
+	\addnumbereddoublerow{}{Adeadline: dtDateAndTime}{used to initialize the deadline field} 
+	\addnumbereddoublerow{}{Aremain: dtDateAndTime}{used to initialize the remain field} 
+	\addnumbereddoublerow{}{Apasstime: dtDateAndTime}{used to initialize the passtime field} 
 
 	\addrowheading{Return type}
 	\addsinglerow{ptBoolean}
@@ -53,6 +56,9 @@ The \msrcode{init} operation has the following properties:
 	and Self.location = Alocation
 	and Self.instant = Ainstant
 	and Self.comment = Acomment
+	and Self.deadline = Adeadline
+	and Self.remain = Aremain
+	and Self.passtime = Apasstime
 	/* Post F02 */
 	and (Self.oclIsNew and self = Self)
 	)

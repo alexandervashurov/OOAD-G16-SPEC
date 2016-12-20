@@ -35,13 +35,17 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute instant:dtDateAndTime
 				attribute comment:dtComment
 				attribute deadline:dtDateAndTime
+				attribute remain:dtDateAndTime
+				attribute passtime:dtDateAndTime
 				
 				operation init(     	Aid:dtAlertID ,
 										Astatus:etAlertStatus ,
 										Alocation:dtGPSLocation ,
 										Ainstant:dtDateAndTime ,
 										Acomment:dtComment,
-										Adeadline:dtDateAndTime
+										Adeadline:dtDateAndTime,
+										Aremain:dtDateAndTime,
+										Apasstime:dtDateAndTime
 										 ):ptBoolean
 				operation isSentToCoordinator(AactCoordinator:actCoordinator ):ptBoolean
 			 
@@ -55,6 +59,8 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute instant:dtDateAndTime
 				attribute comment:dtComment
 				attribute deadline:dtDateAndTime
+				attribute passtime:dtDateAndTime
+				attribute remain:dtDateAndTime
 				
 				operation init(
 										Aid:dtCrisisID ,
@@ -63,11 +69,13 @@ import lu.uni.lassy.messir.libraries.calendar
 										Alocation:dtGPSLocation ,
 										Ainstant:dtDateAndTime ,
 										Acomment:dtComment,
-										Adeadline:dtDateAndTime
+										Adeadline:dtDateAndTime,
+										Aremain:dtDateAndTime,
+										Apasstime:dtDateAndTime
 										):ptBoolean
 										
 				operation handlingDelayPassed():ptBoolean
-        operation maxHandlingDelayPassed():ptBoolean
+        		operation maxHandlingDelayPassed():ptBoolean
 				operation isSentToCoordinator(AactCoordinator:actCoordinator ):ptBoolean
 				operation isAllocatedIfPossible():ptBoolean
 			}

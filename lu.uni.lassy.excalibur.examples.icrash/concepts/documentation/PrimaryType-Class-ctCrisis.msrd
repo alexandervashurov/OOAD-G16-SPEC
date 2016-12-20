@@ -21,7 +21,16 @@
 @attribute icrash.concepts.primarytypes.classes.ctCrisis.comment
 "a textual description providing unstructured information on the crisis handling."
 
-@endAttributes
+@attribute icrash.concepts.primarytypes.classes.ctCrisis.deadline
+"the time at which the alert will end."
+
+@attribute icrash.concepts.primarytypes.classes.ctCrisis.remain
+"how much time remains to the deadline."
+
+@attribute icrash.concepts.primarytypes.classes.ctCrisis.passtime
+"how much time passed from the start of alert."
+
+@endAttributes 
 
 @operation icrash.concepts.primarytypes.classes.ctCrisis.init
 "used to initialize the current object as a new instance of the ctAlert type."

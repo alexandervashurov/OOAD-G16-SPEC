@@ -29,57 +29,57 @@
 \contentsline {lstlisting}{\numberline {5.29}\msrmessir (MCL-oriented) specification of the operation \emph {init}.}{116}{lstlisting.5.29}
 \contentsline {lstlisting}{\numberline {5.30}\msrmessir (Prolog-oriented) implementation of the operation \emph {init}.}{116}{lstlisting.5.30}
 \contentsline {lstlisting}{\numberline {5.31}\msrmessir (MCL-oriented) specification of the operation \emph {isSentToCoordinator}.}{117}{lstlisting.5.31}
-\contentsline {lstlisting}{\numberline {5.32}\msrmessir (Prolog-oriented) implementation of the operation \emph {isSentToCoordinator}.}{117}{lstlisting.5.32}
+\contentsline {lstlisting}{\numberline {5.32}\msrmessir (Prolog-oriented) implementation of the operation \emph {isSentToCoordinator}.}{118}{lstlisting.5.32}
 \contentsline {lstlisting}{\numberline {5.33}\msrmessir (Prolog-oriented) implementation of the operation \emph {init}.}{118}{lstlisting.5.33}
 \contentsline {lstlisting}{\numberline {5.34}\msrmessir (MCL-oriented) specification of the operation \emph {init}.}{119}{lstlisting.5.34}
 \contentsline {lstlisting}{\numberline {5.35}\msrmessir (Prolog-oriented) implementation of the operation \emph {init}.}{120}{lstlisting.5.35}
 \contentsline {lstlisting}{\numberline {5.36}\msrmessir (MCL-oriented) specification of the operation \emph {init}.}{121}{lstlisting.5.36}
 \contentsline {lstlisting}{\numberline {5.37}\msrmessir (Prolog-oriented) implementation of the operation \emph {init}.}{121}{lstlisting.5.37}
 \contentsline {lstlisting}{\numberline {5.38}\msrmessir (MCL-oriented) specification of the operation \emph {handlingDelayPassed}.}{122}{lstlisting.5.38}
-\contentsline {lstlisting}{\numberline {5.39}\msrmessir (Prolog-oriented) implementation of the operation \emph {handlingDelayPassed}.}{122}{lstlisting.5.39}
-\contentsline {lstlisting}{\numberline {5.40}\msrmessir (MCL-oriented) specification of the operation \emph {maxHandlingDelayPassed}.}{123}{lstlisting.5.40}
+\contentsline {lstlisting}{\numberline {5.39}\msrmessir (Prolog-oriented) implementation of the operation \emph {handlingDelayPassed}.}{123}{lstlisting.5.39}
+\contentsline {lstlisting}{\numberline {5.40}\msrmessir (MCL-oriented) specification of the operation \emph {maxHandlingDelayPassed}.}{124}{lstlisting.5.40}
 \contentsline {lstlisting}{\numberline {5.41}\msrmessir (Prolog-oriented) implementation of the operation \emph {maxHandlingDelayPassed}.}{124}{lstlisting.5.41}
 \contentsline {lstlisting}{\numberline {5.42}\msrmessir (MCL-oriented) specification of the operation \emph {isSentToCoordinator}.}{125}{lstlisting.5.42}
 \contentsline {lstlisting}{\numberline {5.43}\msrmessir (Prolog-oriented) implementation of the operation \emph {isSentToCoordinator}.}{125}{lstlisting.5.43}
 \contentsline {lstlisting}{\numberline {5.44}\msrmessir (MCL-oriented) specification of the operation \emph {isAllocatedIfPossible}.}{126}{lstlisting.5.44}
-\contentsline {lstlisting}{\numberline {5.45}\msrmessir (Prolog-oriented) implementation of the operation \emph {isAllocatedIfPossible}.}{126}{lstlisting.5.45}
+\contentsline {lstlisting}{\numberline {5.45}\msrmessir (Prolog-oriented) implementation of the operation \emph {isAllocatedIfPossible}.}{127}{lstlisting.5.45}
 \contentsline {lstlisting}{\numberline {5.46}\msrmessir (MCL-oriented) specification of the operation \emph {init}.}{128}{lstlisting.5.46}
 \contentsline {lstlisting}{\numberline {5.47}\msrmessir (Prolog-oriented) implementation of the operation \emph {init}.}{128}{lstlisting.5.47}
 \contentsline {lstlisting}{\numberline {5.48}\msrmessir (Prolog-oriented) implementation of the operation \emph {isAcknowledged}.}{129}{lstlisting.5.48}
 \contentsline {lstlisting}{\numberline {5.49}\msrmessir (MCL-oriented) specification of the operation \emph {init}.}{130}{lstlisting.5.49}
 \contentsline {lstlisting}{\numberline {5.50}\msrmessir (Prolog-oriented) implementation of the operation \emph {init}.}{131}{lstlisting.5.50}
-\contentsline {lstlisting}{\numberline {5.51}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{131}{lstlisting.5.51}
+\contentsline {lstlisting}{\numberline {5.51}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{132}{lstlisting.5.51}
 \contentsline {lstlisting}{\numberline {5.52}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{132}{lstlisting.5.52}
 \contentsline {lstlisting}{\numberline {5.53}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{133}{lstlisting.5.53}
 \contentsline {lstlisting}{\numberline {5.54}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{133}{lstlisting.5.54}
 \contentsline {lstlisting}{\numberline {5.55}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{134}{lstlisting.5.55}
-\contentsline {lstlisting}{\numberline {5.56}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{134}{lstlisting.5.56}
+\contentsline {lstlisting}{\numberline {5.56}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{135}{lstlisting.5.56}
 \contentsline {lstlisting}{\numberline {5.57}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{135}{lstlisting.5.57}
 \contentsline {lstlisting}{\numberline {5.58}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{136}{lstlisting.5.58}
-\contentsline {lstlisting}{\numberline {5.59}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{136}{lstlisting.5.59}
+\contentsline {lstlisting}{\numberline {5.59}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{137}{lstlisting.5.59}
 \contentsline {lstlisting}{\numberline {5.60}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{137}{lstlisting.5.60}
 \contentsline {lstlisting}{\numberline {5.61}\msrmessir (MCL-oriented) specification of the operation \emph {isNearTo}.}{138}{lstlisting.5.61}
-\contentsline {lstlisting}{\numberline {5.62}\msrmessir (Prolog-oriented) implementation of the operation \emph {isNearTo}.}{138}{lstlisting.5.62}
-\contentsline {lstlisting}{\numberline {5.63}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{139}{lstlisting.5.63}
+\contentsline {lstlisting}{\numberline {5.62}\msrmessir (Prolog-oriented) implementation of the operation \emph {isNearTo}.}{139}{lstlisting.5.62}
+\contentsline {lstlisting}{\numberline {5.63}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{140}{lstlisting.5.63}
 \contentsline {lstlisting}{\numberline {5.64}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{140}{lstlisting.5.64}
-\contentsline {lstlisting}{\numberline {5.65}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{140}{lstlisting.5.65}
+\contentsline {lstlisting}{\numberline {5.65}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{141}{lstlisting.5.65}
 \contentsline {lstlisting}{\numberline {5.66}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{141}{lstlisting.5.66}
-\contentsline {lstlisting}{\numberline {5.67}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{141}{lstlisting.5.67}
-\contentsline {lstlisting}{\numberline {5.68}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{142}{lstlisting.5.68}
+\contentsline {lstlisting}{\numberline {5.67}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{142}{lstlisting.5.67}
+\contentsline {lstlisting}{\numberline {5.68}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{143}{lstlisting.5.68}
 \contentsline {lstlisting}{\numberline {5.69}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{143}{lstlisting.5.69}
-\contentsline {lstlisting}{\numberline {5.70}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{143}{lstlisting.5.70}
+\contentsline {lstlisting}{\numberline {5.70}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{144}{lstlisting.5.70}
 \contentsline {lstlisting}{\numberline {5.71}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{144}{lstlisting.5.71}
 \contentsline {lstlisting}{\numberline {5.72}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{145}{lstlisting.5.72}
 \contentsline {lstlisting}{\numberline {5.73}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{145}{lstlisting.5.73}
 \contentsline {lstlisting}{\numberline {5.74}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{146}{lstlisting.5.74}
-\contentsline {lstlisting}{\numberline {5.75}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{146}{lstlisting.5.75}
+\contentsline {lstlisting}{\numberline {5.75}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{147}{lstlisting.5.75}
 \contentsline {lstlisting}{\numberline {5.76}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{147}{lstlisting.5.76}
-\contentsline {lstlisting}{\numberline {5.77}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{147}{lstlisting.5.77}
-\contentsline {lstlisting}{\numberline {5.78}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{148}{lstlisting.5.78}
+\contentsline {lstlisting}{\numberline {5.77}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{148}{lstlisting.5.77}
+\contentsline {lstlisting}{\numberline {5.78}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{149}{lstlisting.5.78}
 \contentsline {lstlisting}{\numberline {5.79}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{149}{lstlisting.5.79}
-\contentsline {lstlisting}{\numberline {5.80}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{149}{lstlisting.5.80}
+\contentsline {lstlisting}{\numberline {5.80}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{150}{lstlisting.5.80}
 \contentsline {lstlisting}{\numberline {5.81}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{150}{lstlisting.5.81}
-\contentsline {lstlisting}{\numberline {5.82}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{150}{lstlisting.5.82}
+\contentsline {lstlisting}{\numberline {5.82}\msrmessir (MCL-oriented) specification of the operation \emph {is}.}{151}{lstlisting.5.82}
 \contentsline {lstlisting}{\numberline {5.83}\msrmessir (Prolog-oriented) implementation of the operation \emph {is}.}{151}{lstlisting.5.83}
 \contentsline {lstlisting}{\numberline {6.1}\msrmessir (MCL-oriented) specification of the test step \emph {testcase01-ts01oeCreateSystemAndEnvironment}.}{154}{lstlisting.6.1}
 \contentsline {lstlisting}{\numberline {6.2}\msrmessir (Prolog-oriented) implementation of the test step \emph {testcase01-ts01oeCreateSystemAndEnvironment}.}{154}{lstlisting.6.2}
@@ -135,11 +135,11 @@
 \contentsline {lstlisting}{\numberline {C.32}Messir Spec. file primarytypes-classes.msr.}{213}{lstlisting.C.32}
 \contentsline {lstlisting}{\numberline {C.33}Messir Spec. file primarytypes-datatypes-dtAlertID.msr.}{215}{lstlisting.C.33}
 \contentsline {lstlisting}{\numberline {C.34}Messir Spec. file primarytypes-datatypes-dtComment.msr.}{215}{lstlisting.C.34}
-\contentsline {lstlisting}{\numberline {C.35}Messir Spec. file primarytypes-datatypes-dtCoordinatorID.msr.}{215}{lstlisting.C.35}
+\contentsline {lstlisting}{\numberline {C.35}Messir Spec. file primarytypes-datatypes-dtCoordinatorID.msr.}{216}{lstlisting.C.35}
 \contentsline {lstlisting}{\numberline {C.36}Messir Spec. file primarytypes-datatypes-dtCrisisID.msr.}{216}{lstlisting.C.36}
-\contentsline {lstlisting}{\numberline {C.37}Messir Spec. file primarytypes-datatypes-dtGPSLocation.msr.}{216}{lstlisting.C.37}
+\contentsline {lstlisting}{\numberline {C.37}Messir Spec. file primarytypes-datatypes-dtGPSLocation.msr.}{217}{lstlisting.C.37}
 \contentsline {lstlisting}{\numberline {C.38}Messir Spec. file primarytypes-datatypes-dtLogin.msr.}{218}{lstlisting.C.38}
-\contentsline {lstlisting}{\numberline {C.39}Messir Spec. file primarytypes-datatypes-dtPassword.msr.}{218}{lstlisting.C.39}
+\contentsline {lstlisting}{\numberline {C.39}Messir Spec. file primarytypes-datatypes-dtPassword.msr.}{219}{lstlisting.C.39}
 \contentsline {lstlisting}{\numberline {C.40}Messir Spec. file primarytypes-datatypes-dtPhoneNumber.msr.}{219}{lstlisting.C.40}
 \contentsline {lstlisting}{\numberline {C.41}Messir Spec. file primarytypes-datatypes-etAlertStatus.msr.}{219}{lstlisting.C.41}
 \contentsline {lstlisting}{\numberline {C.42}Messir Spec. file primarytypes-datatypes-etCrisisStatus.msr.}{220}{lstlisting.C.42}
@@ -147,7 +147,7 @@
 \contentsline {lstlisting}{\numberline {C.44}Messir Spec. file primarytypes-datatypes-etHumanKind.msr.}{221}{lstlisting.C.44}
 \contentsline {lstlisting}{\numberline {C.45}Messir Spec. file primarytypes-datatypes.msr.}{221}{lstlisting.C.45}
 \contentsline {lstlisting}{\numberline {C.46}Messir Spec. file secondarytypes-associations.msr.}{222}{lstlisting.C.46}
-\contentsline {lstlisting}{\numberline {C.47}Messir Spec. file secondarytypes-classes.msr.}{222}{lstlisting.C.47}
+\contentsline {lstlisting}{\numberline {C.47}Messir Spec. file secondarytypes-classes.msr.}{223}{lstlisting.C.47}
 \contentsline {lstlisting}{\numberline {C.48}Messir Spec. file secondarytypes-datatypes.msr.}{223}{lstlisting.C.48}
 \contentsline {lstlisting}{\numberline {C.49}Messir Spec. file subfunctions-usecases.msr.}{223}{lstlisting.C.49}
 \contentsline {lstlisting}{\numberline {C.50}Messir Spec. file tc-testcase01.msr.}{225}{lstlisting.C.50}
@@ -155,12 +155,12 @@
 \contentsline {lstlisting}{\numberline {C.52}Messir Spec. file ugPassRecovery.msr.}{243}{lstlisting.C.52}
 \contentsline {lstlisting}{\numberline {C.53}Messir Spec. file usecase-suDeployAndRun.msr.}{243}{lstlisting.C.53}
 \contentsline {lstlisting}{\numberline {C.54}Messir Spec. file usecase-suGlobalCrisisHandling.msr.}{248}{lstlisting.C.54}
-\contentsline {lstlisting}{\numberline {C.55}Messir Spec. file usecase-ugAdministrateTheSystem.msr.}{248}{lstlisting.C.55}
+\contentsline {lstlisting}{\numberline {C.55}Messir Spec. file usecase-ugAdministrateTheSystem.msr.}{249}{lstlisting.C.55}
 \contentsline {lstlisting}{\numberline {C.56}Messir Spec. file usecase-ugManageCrisis.msr.}{249}{lstlisting.C.56}
-\contentsline {lstlisting}{\numberline {C.57}Messir Spec. file usecase-ugMonitor.msr.}{249}{lstlisting.C.57}
+\contentsline {lstlisting}{\numberline {C.57}Messir Spec. file usecase-ugMonitor.msr.}{250}{lstlisting.C.57}
 \contentsline {lstlisting}{\numberline {C.58}Messir Spec. file usecase-ugSecurelyUseSystem.msr.}{250}{lstlisting.C.58}
 \contentsline {lstlisting}{\numberline {C.59}Messir Spec. file usecaseinstance-ugManageCrisis-uciugManageCrisis1.msr.}{250}{lstlisting.C.59}
-\contentsline {lstlisting}{\numberline {C.60}Messir Spec. file usecaseinstance-ugPassRecovery-uciugPassRecovery.msr.}{250}{lstlisting.C.60}
+\contentsline {lstlisting}{\numberline {C.60}Messir Spec. file usecaseinstance-ugPassRecovery-uciugPassRecovery.msr.}{251}{lstlisting.C.60}
 \contentsline {lstlisting}{\numberline {C.61}Messir Spec. file usecaseinstance-ugSecurelyUseSystem-uciugSecurelyUseSystem.msr.}{251}{lstlisting.C.61}
 \contentsline {lstlisting}{\numberline {D.1}Prolog file outactActivator-oeSetClock.pl.}{253}{lstlisting.D.1}
 \contentsline {lstlisting}{\numberline {D.2}Prolog file outactActivator-oeSollicitateCrisisHandling.pl.}{254}{lstlisting.D.2}

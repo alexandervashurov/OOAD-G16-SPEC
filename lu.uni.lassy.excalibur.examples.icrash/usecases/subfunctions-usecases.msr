@@ -17,7 +17,7 @@ package icrash.usecases.subfunctions {
 			}
 		}
 		//----------------------------------------------------
-		use case system subfunction oeAlert(AetKind:etHumanKind, AdtMyDate:dtDate, AdtTime:dtTime, AdtPhoneNumber:dtPhoneNumber, AdtGPSLocation:dtGPSLocation, AdtComment:dtComment) {
+		use case system subfunction oeAlert(AetKind:etHumanKind, AdtMyDate:dtDate, AdtTime:dtTime, AdtPhoneNumber:dtPhoneNumber, AdtGPSLocation:dtGPSLocation, AdtComment:dtComment, Adeadline:dtDateAndTime) {
 			actor actComCompany[primary, active]
 			returned messages {
 				ieSmsSend(AdtPhoneNumber, AdtSMS) returned to actComCompany

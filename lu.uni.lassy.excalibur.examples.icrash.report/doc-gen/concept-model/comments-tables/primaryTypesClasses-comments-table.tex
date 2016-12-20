@@ -13,11 +13,14 @@ The table below is providing comments on the graphical views given for the class
 \adddoubletwocolumnrow{operation}{\msrcode{init(Alogin:dtLogin, Apwd:dtPassword, AkeyWord:dtKeyWord):ptBoolean}}{used to initialize the current object as a new instance of the ctAdministrator type.}
 \adddoublerow{ctAlert}{Used to model crisis alerts sent by any human having communication capability using communication companies belonging to the system's environment}
 \adddoubletwocolumnrow{attribute}{\msrcode{comment: dtComment}}{a textual description providing unstructured information on the alert.}
+\adddoubletwocolumnrow{attribute}{\msrcode{deadline: dtDateAndTime}}{the time at which the alert will end.}
 \adddoubletwocolumnrow{attribute}{\msrcode{id: dtAlertID}}{the alert unique identification information.}
 \adddoubletwocolumnrow{attribute}{\msrcode{instant: dtDateAndTime}}{the date and time at which the alert notification has been sent.}
 \adddoubletwocolumnrow{attribute}{\msrcode{location: dtGPSLocation}}{the position of the alert provided by the space-based satellite navigation system used by the human using the communication company to inform the \msricrash system of a crisis.}
+\adddoubletwocolumnrow{attribute}{\msrcode{passtime: dtDateAndTime}}{how much time passed from the start of alert.}
+\adddoubletwocolumnrow{attribute}{\msrcode{remain: dtDateAndTime}}{how much time remains to the deadline.}
 \adddoubletwocolumnrow{attribute}{\msrcode{status: etAlertStatus}}{the alert validation status }
-\adddoubletwocolumnrow{operation}{\msrcode{init(Aid:dtAlertID, Astatus:etAlertStatus, Alocation:dtGPSLocation, Ainstant:dtDateAndTime, Acomment:dtComment, Adeadline:dtDateAndTime):ptBoolean}}{used to initialize the current object as a new instance of the ctAlert type.}
+\adddoubletwocolumnrow{operation}{\msrcode{init(Aid:dtAlertID, Astatus:etAlertStatus, Alocation:dtGPSLocation, Ainstant:dtDateAndTime, Acomment:dtComment, Adeadline:dtDateAndTime, Aremain:dtDateAndTime, Apasstime:dtDateAndTime):ptBoolean}}{used to initialize the current object as a new instance of the ctAlert type.}
 \adddoubletwocolumnrow{operation}{\msrcode{isSentToCoordinator(AactCoordinator:actCoordinator):ptBoolean}}{used to provide a given coordinator with current alert information.}
 \adddoublerow{ctAuthenticated}{used to model system's representation about actors that need to authenticate to access some specific functionalities.}
 \adddoubletwocolumnrow{attribute}{\msrcode{login: dtLogin}}{an identifier for authentication.}
@@ -30,13 +33,16 @@ The table below is providing comments on the graphical views given for the class
 \adddoubletwocolumnrow{operation}{\msrcode{init(Aid:dtCoordinatorID, Alogin:dtLogin, Apwd:dtPassword):ptBoolean}}{used to initialize the current object as a new instance of the ctCoordinator type.}
 \adddoublerow{ctCrisis}{Used to model crisis that are infered from the reception of at least one alert message. Crisis aer entities that are handled by the \msricrash system.}
 \adddoubletwocolumnrow{attribute}{\msrcode{comment: dtComment}}{a textual description providing unstructured information on the crisis handling.}
+\adddoubletwocolumnrow{attribute}{\msrcode{deadline: dtDateAndTime}}{the time at which the alert will end.}
 \adddoubletwocolumnrow{attribute}{\msrcode{id: dtCrisisID}}{the crisis unique identification information.}
 \adddoubletwocolumnrow{attribute}{\msrcode{instant: dtDateAndTime}}{the date and time at which the first related alert notification has been sent.}
 \adddoubletwocolumnrow{attribute}{\msrcode{location: dtGPSLocation}}{the position of the crisis equal by the one of the first alert received and associated to the crisis.}
+\adddoubletwocolumnrow{attribute}{\msrcode{passtime: dtDateAndTime}}{how much time passed from the start of alert.}
+\adddoubletwocolumnrow{attribute}{\msrcode{remain: dtDateAndTime}}{how much time remains to the deadline.}
 \adddoubletwocolumnrow{attribute}{\msrcode{status: etCrisisStatus}}{the crisis handling status.}
 \adddoubletwocolumnrow{attribute}{\msrcode{type: etCrisisType}}{an indication of the gravity of the crisis.}
 \adddoubletwocolumnrow{operation}{\msrcode{handlingDelayPassed():ptBoolean}}{used to determine if the crisis stood too longly in a pending status since last reminder.}
-\adddoubletwocolumnrow{operation}{\msrcode{init(Aid:dtCrisisID, Atype:etCrisisType, Astatus:etCrisisStatus, Alocation:dtGPSLocation, Ainstant:dtDateAndTime, Acomment:dtComment, Adeadline:dtDateAndTime):ptBoolean}}{used to initialize the current object as a new instance of the ctAlert type.}
+\adddoubletwocolumnrow{operation}{\msrcode{init(Aid:dtCrisisID, Atype:etCrisisType, Astatus:etCrisisStatus, Alocation:dtGPSLocation, Ainstant:dtDateAndTime, Acomment:dtComment, Adeadline:dtDateAndTime, Aremain:dtDateAndTime, Apasstime:dtDateAndTime):ptBoolean}}{used to initialize the current object as a new instance of the ctAlert type.}
 \adddoubletwocolumnrow{operation}{\msrcode{isAllocatedIfPossible():ptBoolean}}{used to allocate a crisis to a coordinator if any or to alert the administrator of crisis waiting to be handled.}
 \adddoubletwocolumnrow{operation}{\msrcode{isSentToCoordinator(AactCoordinator:actCoordinator):ptBoolean}}{used to provide a given coordinator with current crisis information.}
 \adddoubletwocolumnrow{operation}{\msrcode{maxHandlingDelayPassed():ptBoolean}}{used to determine if the crisis stood too longly in a pending status since its creation.}

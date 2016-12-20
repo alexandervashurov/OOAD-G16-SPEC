@@ -21,7 +21,9 @@ operation: icrash.concepts.primarytypes.classes.ctCrisis.init(
                 Alocation:dtGPSLocation,
                 Ainstant:dtDateAndTime,
                 Acomment:dtComment,
-                Adeadline:dtDateAndTime
+                Adeadline:dtDateAndTime,
+                Aremain:dtDateAndTime,
+                Apasstime:dtDateAndTime
               ):ptBoolean{
 postF{
 if
@@ -34,6 +36,9 @@ and Self.status = Astatus
 and Self.location = Alocation
 and Self.instant = Ainstant
 and Self.comment = Acomment
+and Self.deadline = Adeadline
+and Self.remain = Aremain
+and Self.passtime = Apasstime
 /* Post F02 */
 and (Self.oclIsNew and self = Self)
 )
